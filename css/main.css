@@ -219,7 +219,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero-tagline {
   font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 400;
   font-style: italic;
   line-height: 1.6;
@@ -238,7 +238,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .hero-tagline {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
   }
 }
 

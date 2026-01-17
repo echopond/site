@@ -187,14 +187,23 @@
   function initAudioToggle() {
     if (!elements.audio || !elements.audioToggle) return;
 
+    // Start with audio paused
+    state.audioPlaying = false;
     elements.audioToggle.addEventListener('click', toggleAudio);
   }
 
   function toggleAudio() {
-    state.audioMuted = !state.audioMuted;
-    elements.audio.muted = state.audioMuted;
-    elements.audioToggle.classList.toggle('muted', state.audioMuted);
-    elements.audioToggle.setAttribute('aria-label', state.audioMuted ? 'Unmute audio' : 'Mute audio');
+    if (state.audioPlaying) {
+      elements.audio.pause();
+      state.audioPlaying = false;
+      elements.audioToggle.classList.add('muted');
+      elements.audioToggle.setAttribute('aria-label', 'Play audio');
+    } else {
+      elements.audio.play();
+      state.audioPlaying = true;
+      elements.audioToggle.classList.remove('muted');
+      elements.audioToggle.setAttribute('aria-label', 'Pause audio');
+    }
   }
 
   // ============================================

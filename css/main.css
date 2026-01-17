@@ -56,7 +56,7 @@ h1, h2, h3, h4, h5, h6 {
   right: 0;
   z-index: 100;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 1.25rem 2rem;
   background: #fff;
@@ -85,6 +85,10 @@ h1, h2, h3, h4, h5, h6 {
   gap: 2.5rem;
 }
 
+.site-nav--centered {
+  justify-content: center;
+}
+
 .site-nav a {
   font-family: 'Inter', sans-serif;
   font-size: 0.8125rem;
@@ -106,6 +110,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Nav Toggle */
 .nav-toggle {
+  position: absolute;
+  right: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -360,6 +366,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1.5rem;
   padding-bottom: 0.75rem;
   border-bottom: 1px solid #e5e5e5;
+  scroll-margin-top: 5rem;
 }
 
 .article-body h2:first-child {

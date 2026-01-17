@@ -19,7 +19,9 @@
     header: document.querySelector('.site-header'),
     navToggle: document.querySelector('.nav-toggle'),
     mobileMenu: document.querySelector('.mobile-menu'),
-    fadeElements: document.querySelectorAll('.article-body, .full-image, .image-grid, .article-credits, .related')
+    fadeElements: document.querySelectorAll('.article-body, .full-image, .image-grid, .article-credits, .related'),
+    audio: document.getElementById('bg-audio'),
+    audioToggle: document.getElementById('audio-toggle')
   };
 
   // State
@@ -27,7 +29,8 @@
     lastScrollY: 0,
     headerVisible: true,
     menuOpen: false,
-    ticking: false
+    ticking: false,
+    audioMuted: false
   };
 
   // ============================================
@@ -178,6 +181,23 @@
   }
 
   // ============================================
+  // Audio Toggle
+  // ============================================
+
+  function initAudioToggle() {
+    if (!elements.audio || !elements.audioToggle) return;
+
+    elements.audioToggle.addEventListener('click', toggleAudio);
+  }
+
+  function toggleAudio() {
+    state.audioMuted = !state.audioMuted;
+    elements.audio.muted = state.audioMuted;
+    elements.audioToggle.classList.toggle('muted', state.audioMuted);
+    elements.audioToggle.setAttribute('aria-label', state.audioMuted ? 'Unmute audio' : 'Mute audio');
+  }
+
+  // ============================================
   // Initialize
   // ============================================
 
@@ -186,6 +206,7 @@
     initMobileNav();
     initScrollReveal();
     initSmoothScroll();
+    initAudioToggle();
   }
 
   // Run on DOM ready

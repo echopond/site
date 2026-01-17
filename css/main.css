@@ -81,7 +81,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .site-nav {
-  display: none;
+  display: flex;
   gap: 2.5rem;
 }
 
@@ -102,17 +102,11 @@ h1, h2, h3, h4, h5, h6 {
   color: #1a1a1a;
 }
 
-@media (min-width: 768px) {
-  .site-nav {
-    display: flex;
-  }
-}
-
 /* Nav Toggle */
 .nav-toggle {
   position: absolute;
   right: 2rem;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   gap: 5px;

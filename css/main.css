@@ -691,6 +691,17 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
 }
 
+.footer-logos {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.footer-logo-img {
+  height: 24px;
+  width: auto;
+}
+
 .footer-brand p {
   font-family: 'Lora', serif;
   font-size: 0.9375rem;

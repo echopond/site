@@ -209,10 +209,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-title {
-  font-family: 'Inter', sans-serif;
-  font-size: 2rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 3rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   margin-bottom: 0.75rem;
 }
@@ -233,7 +233,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .hero-title {
-    font-size: 3rem;
+    font-size: 4rem;
   }
 
   .hero-tagline {

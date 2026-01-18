@@ -165,25 +165,24 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 767px) {
   .site-header {
     padding: 0;
+    display: block;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
   }
 
-  .site-nav {
-    width: 100%;
+  .site-nav,
+  .site-nav.site-nav--centered {
+    display: flex;
     justify-content: flex-start;
     gap: 1.5rem;
     padding: 1rem 1.5rem;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE/Edge */
-  }
-
-  .site-nav::-webkit-scrollbar {
-    display: none; /* Chrome/Safari */
+    width: max-content;
+    min-width: 100%;
   }
 
   .site-nav a {
-    flex-shrink: 0; /* Prevent links from shrinking */
+    flex-shrink: 0;
     white-space: nowrap;
   }
 

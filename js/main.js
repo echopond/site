@@ -90,6 +90,13 @@
       link.addEventListener('click', closeMenu);
     });
 
+    // Close on clicking overlay (outside the nav)
+    elements.mobileMenu.addEventListener('click', (e) => {
+      if (e.target === elements.mobileMenu) {
+        closeMenu();
+      }
+    });
+
     // Close on escape
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && state.menuOpen) {

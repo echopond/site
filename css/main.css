@@ -190,23 +190,46 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* Mobile Menu */
+/* Mobile Menu - Slide-in Drawer */
 .mobile-menu {
   position: fixed;
-  inset: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 280px;
+  max-width: 80vw;
   z-index: 99;
   background: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0;
+  transform: translateX(100%);
   visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
+  transition: transform 0.3s ease, visibility 0.3s ease;
+  box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1);
 }
 
 .mobile-menu.is-open {
-  opacity: 1;
+  transform: translateX(0);
   visibility: visible;
+}
+
+/* Overlay behind drawer */
+.mobile-menu::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 280px;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.3s ease;
+  pointer-events: none;
+}
+
+.mobile-menu.is-open::before {
+  background: rgba(0, 0, 0, 0.3);
+  pointer-events: auto;
 }
 
 .mobile-menu-nav {

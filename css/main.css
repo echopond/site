@@ -161,9 +161,34 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
 }
 
-/* Hide desktop nav on mobile */
+/* Scrollable nav on mobile */
 @media (max-width: 767px) {
+  .site-header {
+    padding: 0;
+  }
+
   .site-nav {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    padding: 1rem 1.5rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+  }
+
+  .site-nav::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+  }
+
+  .site-nav a {
+    flex-shrink: 0; /* Prevent links from shrinking */
+    white-space: nowrap;
+  }
+
+  /* Hide hamburger - using scrollable nav instead */
+  .nav-toggle {
     display: none;
   }
 }

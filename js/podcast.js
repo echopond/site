@@ -9,7 +9,7 @@
   var BASE = '../media/podcast/';
 
   var EPISODES = [
-    { id: 'prologue',  number: 'Prologue',  title: 'The House That Looks Inevitable', file: 'echo-pond_00-prologue.mp3', duration: 669,
+    { id: 'prologue',  number: 'Prologue',  title: 'The House That Looks Inevitable', file: 'echo-pond_00-prologue.mp3', duration: 620,
       sections: 'A resolved surface compresses its history. This book begins inside that compression.' },
     { id: 'part-1',    number: 'Part I',    title: 'Before a House Could Be Drawn', file: 'echo-pond_01-part-1.mp3', duration: 1267,
       sections: 'A walk conducted by phone · "I love it" · What we agreed to carry · A deed is not an origin · All wrong · Five bedrooms before a plan · A handoff, not a beginning · The arrow' },

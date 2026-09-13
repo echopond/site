@@ -10,21 +10,21 @@
 
   var EPISODES = [
     { id: 'prologue',  number: 'Prologue',  title: 'The House That Looks Inevitable', file: 'echo-pond_00-prologue.mp3', duration: 620,
-      sections: 'A resolved surface compresses its history. This book begins inside that compression.' },
+      sections: 'The finished house makes it easy to forget the uncertainty in nearly five years of emails and phone photos. That’s what makes life so exciting, right?' },
     { id: 'part-1',    number: 'Part I',    title: 'Before a House Could Be Drawn', file: 'echo-pond_01-part-1.mp3', duration: 1267,
-      sections: 'A walk conducted by phone · "I love it" · What we agreed to carry · A deed is not an origin · All wrong · Five bedrooms before a plan · A handoff, not a beginning · The arrow' },
+      sections: 'We owned eleven wooded acres beside a pond. Whether they could hold a house was still an open question.' },
     { id: 'interlude', number: 'Interlude', title: 'What the Echo Returns', file: 'echo-pond_02-interlude.mp3', duration: 260,
-      sections: 'Two tellings of the Echo myth: Ovid’s nymph, who can only repeat, and Longus’s, whose scattered voice returns through the earth changed by what received it.' },
+      sections: 'The pond had been named, renamed, and imagined by others long before we arrived. Old maps, a lakeside resort, two versions of the Echo myth, and Thoreau’s woods.' },
     { id: 'part-2',    number: 'Part II',   title: 'Choosing the House-Shaped House', file: 'echo-pond_03-part-2.mp3', duration: 1048,
-      sections: 'A brief written as life · 611 sq. ft. of work · Hardlined · L or pinwheel · The number · Five scenarios · Returning to the brief · A form that could become home' },
+      sections: 'Alison had described warm rooms, a long cutting table, and places to be together or alone. The budget asked what could change, what mattered enough to keep, and whether we could continue.' },
     { id: 'part-3',    number: 'Part III',  title: 'Paying for the Line on the Drawing', file: 'echo-pond_04-part-3.mp3', duration: 1237,
-      sections: 'What a lender could see · Onward · Before every dollar was secured · Fourteen hundred feet · The crossing · What the surface could not say · Ground that could bear' },
+      sections: 'We had a design we wanted, a bank that would not pay for dirt, and no way to know exactly how the rock beneath us would break.' },
     { id: 'part-4',    number: 'Part IV',   title: 'The Difficult Work of a Simple Form', file: 'echo-pond_05-part-4.mp3', duration: 1494,
-      sections: 'Before the walls existed · A wire in open space · More glass than wall · The puzzle arrived in pieces · An opening found at full scale · One dark field · An eighth of an inch · A second look changed the direction · The key' },
+      sections: 'What a simple form asked of everyone who built it. The only time to get it right is right now.' },
     { id: 'part-5',    number: 'Part V',    title: 'After Completion Changes Tense', file: 'echo-pond_06-part-5.mp3', duration: 998,
-      sections: 'Like we had been here forever · Complete, but not finished · The room with a door · The double sun · A philosophy we were sitting inside · Four verbs at the threshold' },
+      sections: 'We had the keys, a punch list, and a meadow that had barely begun. Living here would tell us things the drawings could not.' },
     { id: 'coda',      number: 'Coda',      title: 'What Returned Changed', file: 'echo-pond_07-coda.mp3', duration: 327,
-      sections: 'Final thoughts on the work of building together' }
+      sections: 'We knew things would go wrong and who we had thrown our fate in with. The house we had imagined gave way to the house we had always wanted without knowing how to imagine it.' }
   ];
 
   var SPEEDS = [1, 1.25, 1.5, 1.75, 2, 0.75];

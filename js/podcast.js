@@ -23,7 +23,7 @@
       sections: 'Before the walls existed · A wire in open space · More glass than wall · The puzzle arrived in pieces · An opening found at full scale · One dark field · An eighth of an inch · A second look changed the direction · The key' },
     { id: 'part-5',    number: 'Part V',    title: 'After Completion Changes Tense', file: 'echo-pond_06-part-5.mp3', duration: 998,
       sections: 'Like we had been here forever · Complete, but not finished · The room with a door · The double sun · A philosophy we were sitting inside · Four verbs at the threshold' },
-    { id: 'coda',      number: 'Coda',      title: 'What Returned Changed', file: 'echo-pond_07-coda.mp3', duration: 295,
+    { id: 'coda',      number: 'Coda',      title: 'What Returned Changed', file: 'echo-pond_07-coda.mp3', duration: 327,
       sections: 'Final thoughts on the work of building together' }
   ];
 

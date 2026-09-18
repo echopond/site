@@ -5,8 +5,8 @@
      xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>A House-Shaped House</title>
-    <link>https://echopond.github.io/site/podcast/</link>
-    <atom:link href="https://echopond.github.io/site/podcast/feed.xml" rel="self" type="application/rss+xml"/>
+    <link>https://echopond.org/podcast/</link>
+    <atom:link href="https://echopond.org/podcast/feed.xml" rel="self" type="application/rss+xml"/>
     <language>en-us</language>
     <copyright>&#169; 2026 Chris R. Glass</copyright>
     <description>A House-Shaped House is my account of building Echo Pond. It stays with one house and looks beneath the finished image like a kid kicking over a rock. We thought we understood what we were taking on. Over nearly five years, the soil, the budget, the bank, the ledge, and the work itself kept showing us otherwise. Life became white-knuckle exciting. The test was not just whether we could build a house, but whether the relationships carrying it could survive what building would ask of them. I kept messages, drawings, and notes because I was often confused and trying to make sense of the build from inside it. This is neither an exemplar nor a warning. It is one story of one attempt to build a house-shaped house, told from the moments when everyone was still trying to figure out what to do next.</description>
@@ -16,11 +16,11 @@
     <itunes:owner>
       <itunes:name>Chris R. Glass</itunes:name>
     </itunes:owner>
-    <itunes:image href="https://echopond.github.io/site/media/podcast/cover-roof.jpg"/>
+    <itunes:image href="https://echopond.org/media/podcast/cover-roof.jpg"/>
     <image>
-      <url>https://echopond.github.io/site/media/podcast/cover-roof.jpg</url>
+      <url>https://echopond.org/media/podcast/cover-roof.jpg</url>
       <title>A House-Shaped House</title>
-      <link>https://echopond.github.io/site/podcast/</link>
+      <link>https://echopond.org/podcast/</link>
     </image>
     <itunes:category text="Arts">
       <itunes:category text="Design"/>
@@ -37,11 +37,11 @@
       <itunes:episode>1</itunes:episode>
       <itunes:episodeType>full</itunes:episodeType>
       <guid isPermaLink="false">echopond-house-shaped-house-prologue</guid>
-      <link>https://echopond.github.io/site/podcast/#prologue</link>
+      <link>https://echopond.org/podcast/#prologue</link>
       <pubDate>Mon, 07 Sep 2026 11:53:00 +0000</pubDate>
       <description>The finished house makes it easy to forget the uncertainty in nearly five years of emails and phone photos. That’s what makes life so exciting, right?</description>
       <itunes:summary>The finished house makes it easy to forget the uncertainty in nearly five years of emails and phone photos. That’s what makes life so exciting, right?</itunes:summary>
-      <enclosure url="https://echopond.github.io/site/media/podcast/echo-pond_00-prologue.mp3" length="7435042" type="audio/mpeg"/>
+      <enclosure url="https://echopond.org/media/podcast/echo-pond_00-prologue.mp3" length="7435042" type="audio/mpeg"/>
       <itunes:duration>0:10:20</itunes:duration>
       <itunes:explicit>false</itunes:explicit>
     </item>
@@ -51,11 +51,11 @@
       <itunes:episode>2</itunes:episode>
       <itunes:episodeType>full</itunes:episodeType>
       <guid isPermaLink="false">echopond-house-shaped-house-part-1</guid>
-      <link>https://echopond.github.io/site/podcast/#part-1</link>
+      <link>https://echopond.org/podcast/#part-1</link>
       <pubDate>Mon, 07 Sep 2026 11:54:00 +0000</pubDate>
       <description>We owned eleven wooded acres beside a pond. Whether they could hold a house was still an open question.</description>
       <itunes:summary>We owned eleven wooded acres beside a pond. Whether they could hold a house was still an open question.</itunes:summary>
-      <enclosure url="https://echopond.github.io/site/media/podcast/echo-pond_01-part-1.mp3" length="20275281" type="audio/mpeg"/>
+      <enclosure url="https://echopond.org/media/podcast/echo-pond_01-part-1.mp3" length="20275281" type="audio/mpeg"/>
       <itunes:duration>0:21:07</itunes:duration>
       <itunes:explicit>false</itunes:explicit>
     </item>
@@ -65,11 +65,11 @@
       <itunes:episode>3</itunes:episode>
       <itunes:episodeType>full</itunes:episodeType>
       <guid isPermaLink="false">echopond-house-shaped-house-interlude</guid>
-      <link>https://echopond.github.io/site/podcast/#interlude</link>
+      <link>https://echopond.org/podcast/#interlude</link>
       <pubDate>Mon, 07 Sep 2026 11:55:00 +0000</pubDate>
       <description>The pond had been named, renamed, and imagined by others long before we arrived. Old maps, a lakeside resort, two versions of the Echo myth, and Thoreau’s woods.</description>
       <itunes:summary>The pond had been named, renamed, and imagined by others long before we arrived. Old maps, a lakeside resort, two versions of the Echo myth, and Thoreau’s woods.</itunes:summary>
-      <enclosure url="https://echopond.github.io/site/media/podcast/echo-pond_02-interlude.mp3" length="4156270" type="audio/mpeg"/>
+      <enclosure url="https://echopond.org/media/podcast/echo-pond_02-interlude.mp3" length="4156270" type="audio/mpeg"/>
       <itunes:duration>0:04:20</itunes:duration>
       <itunes:explicit>false</itunes:explicit>
     </item>
@@ -79,11 +79,11 @@
       <itunes:episode>4</itunes:episode>
       <itunes:episodeType>full</itunes:episodeType>
       <guid isPermaLink="false">echopond-house-shaped-house-part-2</guid>
-      <link>https://echopond.github.io/site/podcast/#part-2</link>
+      <link>https://echopond.org/podcast/#part-2</link>
       <pubDate>Mon, 07 Sep 2026 11:56:00 +0000</pubDate>
       <description>Alison had described warm rooms, a long cutting table, and places to be together or alone. The budget asked what could change, what mattered enough to keep, and whether we could continue.</description>
       <itunes:summary>Alison had described warm rooms, a long cutting table, and places to be together or alone. The budget asked what could change, what mattered enough to keep, and whether we could continue.</itunes:summary>
-      <enclosure url="https://echopond.github.io/site/media/podcast/echo-pond_03-part-2.mp3" length="16770693" type="audio/mpeg"/>
+      <enclosure url="https://echopond.org/media/podcast/echo-pond_03-part-2.mp3" length="16770693" type="audio/mpeg"/>
       <itunes:duration>0:17:28</itunes:duration>
       <itunes:explicit>false</itunes:explicit>
     </item>
@@ -93,11 +93,11 @@
       <itunes:episode>5</itunes:episode>
       <itunes:episodeType>full</itunes:episodeType>
       <guid isPermaLink="false">echopond-house-shaped-house-part-3</guid>
-      <link>https://echopond.github.io/site/podcast/#part-3</link>
+      <link>https://echopond.org/podcast/#part-3</link>
       <pubDate>Mon, 07 Sep 2026 11:57:00 +0000</pubDate>
       <description>We had a design we wanted, a bank that would not pay for dirt, and no way to know exactly how the rock beneath us would break.</description>
       <itunes:summary>We had a design we wanted, a bank that would not pay for dirt, and no way to know exactly how the rock beneath us would break.</itunes:summary>
-      <enclosure url="https://echopond.github.io/site/media/podcast/echo-pond_04-part-3.mp3" length="19790030" type="audio/mpeg"/>
+      <enclosure url="https://echopond.org/media/podcast/echo-pond_04-part-3.mp3" length="19790030" type="audio/mpeg"/>
       <itunes:duration>0:20:37</itunes:duration>
       <itunes:explicit>false</itunes:explicit>
     </item>
@@ -107,11 +107,11 @@
       <itunes:episode>6</itunes:episode>
       <itunes:episodeType>full</itunes:episodeType>
       <guid isPermaLink="false">echopond-house-shaped-house-part-4</guid>
-      <link>https://echopond.github.io/site/podcast/#part-4</link>
+      <link>https://echopond.org/podcast/#part-4</link>
       <pubDate>Mon, 07 Sep 2026 11:58:00 +0000</pubDate>
       <description>What a simple form asked of everyone who built it. The only time to get it right is right now.</description>
       <itunes:summary>What a simple form asked of everyone who built it. The only time to get it right is right now.</itunes:summary>
-      <enclosure url="https://echopond.github.io/site/media/podcast/echo-pond_05-part-4.mp3" length="23905256" type="audio/mpeg"/>
+      <enclosure url="https://echopond.org/media/podcast/echo-pond_05-part-4.mp3" length="23905256" type="audio/mpeg"/>
       <itunes:duration>0:24:54</itunes:duration>
       <itunes:explicit>false</itunes:explicit>
     </item>
@@ -121,11 +121,11 @@
       <itunes:episode>7</itunes:episode>
       <itunes:episodeType>full</itunes:episodeType>
       <guid isPermaLink="false">echopond-house-shaped-house-part-5</guid>
-      <link>https://echopond.github.io/site/podcast/#part-5</link>
+      <link>https://echopond.org/podcast/#part-5</link>
       <pubDate>Mon, 07 Sep 2026 11:59:00 +0000</pubDate>
       <description>We had the keys, a punch list, and a meadow that had barely begun. Living here would tell us things the drawings could not.</description>
       <itunes:summary>We had the keys, a punch list, and a meadow that had barely begun. Living here would tell us things the drawings could not.</itunes:summary>
-      <enclosure url="https://echopond.github.io/site/media/podcast/echo-pond_06-part-5.mp3" length="15940626" type="audio/mpeg"/>
+      <enclosure url="https://echopond.org/media/podcast/echo-pond_06-part-5.mp3" length="15940626" type="audio/mpeg"/>
       <itunes:duration>0:16:36</itunes:duration>
       <itunes:explicit>false</itunes:explicit>
     </item>
@@ -135,11 +135,11 @@
       <itunes:episode>8</itunes:episode>
       <itunes:episodeType>full</itunes:episodeType>
       <guid isPermaLink="false">echopond-house-shaped-house-coda</guid>
-      <link>https://echopond.github.io/site/podcast/#coda</link>
+      <link>https://echopond.org/podcast/#coda</link>
       <pubDate>Mon, 07 Sep 2026 12:00:00 +0000</pubDate>
       <description>We knew things would go wrong and who we had thrown our fate in with. The house we had imagined gave way to the house we had always wanted without knowing how to imagine it.</description>
       <itunes:summary>We knew things would go wrong and who we had thrown our fate in with. The house we had imagined gave way to the house we had always wanted without knowing how to imagine it.</itunes:summary>
-      <enclosure url="https://echopond.github.io/site/media/podcast/echo-pond_07-coda.mp3" length="5232518" type="audio/mpeg"/>
+      <enclosure url="https://echopond.org/media/podcast/echo-pond_07-coda.mp3" length="5232518" type="audio/mpeg"/>
       <itunes:duration>0:05:27</itunes:duration>
       <itunes:explicit>false</itunes:explicit>
     </item>

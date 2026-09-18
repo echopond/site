@@ -15,9 +15,9 @@ Key facts, all stated on the site:
 
 ## Pages
 
-- [Echo Pond (article)](https://echopond.github.io/site/): the site, the material, the space, the history of Glen Echo Pond and the landscape.
-- [Build](https://echopond.github.io/site/build/): the wall assembly layer by layer, then site, foundation, frame, envelope, shingle, glass, interior materials, furnishings, systems and landscape, each with a specification table, the firms and the products.
-- [Watch](https://echopond.github.io/site/watch/): NS Builders' construction episodes in build order, with photographs by Motif Media.
+- [Echo Pond (article)](https://echopond.org/): the site, the material, the space, the history of Glen Echo Pond and the landscape.
+- [Build](https://echopond.org/build/): the wall assembly layer by layer, then site, foundation, frame, envelope, shingle, glass, interior materials, furnishings, systems and landscape, each with a specification table, the firms and the products.
+- [Watch](https://echopond.org/watch/): NS Builders' construction episodes in build order, with photographs by Motif Media.
 
 ## Credits
 

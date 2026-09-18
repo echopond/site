@@ -92,3 +92,7 @@ This is a zero-configuration static site:
 - "Moments" is a 24-photo Motif Media gallery (`.gallery[data-gallery]`, thumbnails `gallery-NN-thumb.jpg` linking to `gallery-NN.jpg`); `initGallery()` in `js/main.js` adds the lightbox. No identifiable faces in any photo. The Instagram cards sit below it.
 - Navigation is two-level (2026-09-18): the primary menu is pages (Read = the article, Watch, and Listen on the podcast page only until the podcast is linked site-wide), with `.is-current` on the current page. The article's section links (Site, Material, Space, History, Landscape) are a second row, `.site-subnav`. Every page carries its own `.site-subnav` row for its own sections (header class `site-header--sub`); new pages should follow the pattern.
 - The footer on both pages carries the Motif Media logo (`assets/images/motif-media-white.svg`).
+
+## Listen page is hidden until launch (2026-09-18)
+
+The podcast page and feed still work at their direct URLs, but nothing links to them, the article no longer advertises the RSS feed, and the page carries `noindex`. Every hidden piece is marked `LISTEN-HIDDEN`. To launch: `grep -rn LISTEN-HIDDEN .`, then uncomment the Listen links in the Read and Watch menus (desktop and mobile), restore the RSS `<link>` in `index.html`, and delete the robots meta line in `podcast/index.html`.

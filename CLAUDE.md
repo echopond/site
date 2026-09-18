@@ -79,3 +79,16 @@ This is a zero-configuration static site:
 ## Podcast (added 2026-09-07)
 
 `podcast/index.html` is the audiobook-documentary player for *A House-Shaped House* (eight chapters, ~2 h 3 min). It reuses `css/main.css` and adds `css/podcast.css` and `js/podcast.js`. Audio lives in `media/podcast/` as 96 kbps mono MP3 (about 87 MB total; GitHub rejects files over 100 MB, so never commit WAV masters). `podcast/feed.xml` is a hand-built RSS feed with iTunes tags; enclosure URLs and `length` (byte size) must be updated if an MP3 is replaced. Deep links take the form `podcast/#part-3&t=8m40s`. The player stores resume position and speed in `localStorage`.
+
+## Watch page (added 2026-09-18)
+
+`watch/index.html` is a curated companion to the article: NS Builders' YouTube episodes in build order, each paired with a Motif Media photograph, then Instagram moments and a few of the owners' own clips. It reuses `css/main.css` and `js/main.js` and adds `css/watch.css`. Media lives in `media/watch/` (photos at 2000 px, loops at 720p H.264 with poster JPGs).
+
+- YouTube is click-to-load: `.yt[data-yt="<video id>"]` shows a local poster, and `initYouTubeEmbeds()` in `js/main.js` inserts a `youtube-nocookie.com` iframe only on click. Nothing is requested from YouTube before that.
+- Instagram posts are linked cards with local stills, not embeds.
+- Captions are written for this site; the YouTube title is secondary. No em dashes.
+- Credits: "Motif Media" links to https://www.motifmedia.com/ wherever it appears, and the footer links Of Possible's project page (https://www.ofpossible.com/echo-pond-residence).
+- The hero video has an H.264 source (`media/video/hero.mp4`) ahead of the original HEVC `.mov`.
+- "Moments" is a 24-photo Motif Media gallery (`.gallery[data-gallery]`, thumbnails `gallery-NN-thumb.jpg` linking to `gallery-NN.jpg`); `initGallery()` in `js/main.js` adds the lightbox. No identifiable faces in any photo. The Instagram cards sit below it.
+- The Watch page uses the same top menu as the article, with links pointing back to `../#section`.
+- The footer on both pages carries the Motif Media logo (`assets/images/motif-media-white.svg`).

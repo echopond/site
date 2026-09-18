@@ -174,6 +174,11 @@
         if (entry.isIntersecting) {
           const video = entry.target;
           const source = video.querySelector('source[data-src]');
+          // With reduced motion, keep the poster and let the viewer press play
+          if (CONFIG.reducedMotion && video.hasAttribute('poster')) {
+            video.removeAttribute('autoplay');
+            video.setAttribute('controls', '');
+          }
           if (source) {
             source.src = source.dataset.src;
             video.load();
@@ -217,6 +222,93 @@
   }
 
   // ============================================
+  // Click-to-load YouTube
+  // ============================================
+
+  // Nothing is requested from YouTube until the viewer presses play
+  function initGallery() {
+    const gallery = document.querySelector('[data-gallery]');
+    if (!gallery) return;
+    const items = Array.from(gallery.querySelectorAll('.gallery-item'));
+    let index = 0;
+    let lastFocus = null;
+
+    const box = document.createElement('div');
+    box.className = 'lightbox';
+    box.hidden = true;
+    box.setAttribute('role', 'dialog');
+    box.setAttribute('aria-modal', 'true');
+    box.setAttribute('aria-label', 'Photograph');
+    box.innerHTML =
+      '<button class="lightbox-close" type="button" aria-label="Close">&times;</button>' +
+      '<button class="lightbox-prev" type="button" aria-label="Previous photograph">&lsaquo;</button>' +
+      '<img alt="">' +
+      '<p class="lightbox-caption"></p>' +
+      '<button class="lightbox-next" type="button" aria-label="Next photograph">&rsaquo;</button>';
+    document.body.appendChild(box);
+    const img = box.querySelector('img');
+    const caption = box.querySelector('.lightbox-caption');
+
+    function show(i) {
+      index = (i + items.length) % items.length;
+      const item = items[index];
+      img.src = item.href;
+      img.alt = item.querySelector('img').alt;
+      caption.textContent = item.dataset.caption + ' Photo by Motif Media. ' + (index + 1) + ' / ' + items.length;
+    }
+
+    function open(i) {
+      lastFocus = document.activeElement;
+      show(i);
+      box.hidden = false;
+      document.body.style.overflow = 'hidden';
+      box.querySelector('.lightbox-close').focus();
+    }
+
+    function close() {
+      box.hidden = true;
+      img.removeAttribute('src');
+      document.body.style.overflow = '';
+      if (lastFocus) lastFocus.focus();
+    }
+
+    items.forEach((item, i) => {
+      item.addEventListener('click', e => {
+        e.preventDefault();
+        open(i);
+      });
+    });
+    box.querySelector('.lightbox-close').addEventListener('click', close);
+    box.querySelector('.lightbox-prev').addEventListener('click', () => show(index - 1));
+    box.querySelector('.lightbox-next').addEventListener('click', () => show(index + 1));
+    box.addEventListener('click', e => {
+      if (e.target === box) close();
+    });
+    document.addEventListener('keydown', e => {
+      if (box.hidden) return;
+      if (e.key === 'Escape') close();
+      else if (e.key === 'ArrowLeft') show(index - 1);
+      else if (e.key === 'ArrowRight') show(index + 1);
+    });
+  }
+
+  function initYouTubeEmbeds() {
+    document.querySelectorAll('.yt[data-yt]').forEach(wrapper => {
+      const button = wrapper.querySelector('.yt-button');
+      if (!button) return;
+
+      button.addEventListener('click', () => {
+        const iframe = document.createElement('iframe');
+        iframe.src = 'https://www.youtube-nocookie.com/embed/' + wrapper.dataset.yt + '?autoplay=1&rel=0';
+        iframe.title = button.getAttribute('aria-label') || 'Video';
+        iframe.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+        iframe.allowFullscreen = true;
+        wrapper.replaceChildren(iframe);
+      });
+    });
+  }
+
+  // ============================================
   // Audio Toggle
   // ============================================
 
@@ -252,6 +344,8 @@
     initScrollReveal();
     initLazyVideos();
     initSmoothScroll();
+    initYouTubeEmbeds();
+    initGallery();
     initAudioToggle();
   }
 

@@ -784,7 +784,8 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 auto;
   display: flex;
   justify-content: center;
-  gap: 4rem;
+  flex-wrap: wrap;
+  gap: 2.5rem 4rem;
 }
 
 .footer-logo-group {
@@ -953,4 +954,17 @@ h1, h2, h3, h4, h5, h6 {
   .article-body {
     max-width: 100%;
   }
+}
+
+/* Links inside captions (credits) */
+figcaption a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: #ccc;
+  text-underline-offset: 2px;
+  transition: color 0.2s ease;
+}
+
+figcaption a:hover {
+  color: #1a1a1a;
 }

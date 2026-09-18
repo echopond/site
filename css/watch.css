@@ -14,6 +14,23 @@
   margin-bottom: 1.5rem;
 }
 
+/* Page titles stay in the markup for search engines and screen readers; the menu already names the page. */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.watch-header--bare {
+  padding-bottom: 0;
+}
+
 .watch-intro {
   font-size: 1.125rem;
   line-height: 1.7;

@@ -353,6 +353,92 @@
   }
 
   // ============================================
+  // Video modal (Build page)
+  // ============================================
+
+  // A .build-video link plays its episode in a dialog on the same page.
+  // Nothing is requested from YouTube until the reader clicks. Without
+  // JavaScript, or with a modified click, the link opens YouTube instead.
+  function initVideoModal() {
+    const links = document.querySelectorAll('a.build-video[data-yt]');
+    if (!links.length) return;
+
+    const modal = document.createElement('div');
+    modal.className = 'video-modal';
+    modal.hidden = true;
+    modal.setAttribute('role', 'dialog');
+    modal.setAttribute('aria-modal', 'true');
+    modal.innerHTML =
+      '<div class="video-modal-inner">' +
+      '<button class="video-modal-close" type="button" aria-label="Close video">&times;</button>' +
+      '<div class="video-modal-frame"></div>' +
+      '<p class="video-modal-caption"></p>' +
+      '</div>';
+    document.body.appendChild(modal);
+
+    const frame = modal.querySelector('.video-modal-frame');
+    const caption = modal.querySelector('.video-modal-caption');
+    const closeBtn = modal.querySelector('.video-modal-close');
+    let opener = null;
+
+    function open(link) {
+      opener = link;
+      const title = link.dataset.title || 'Video';
+      const iframe = document.createElement('iframe');
+      iframe.src = 'https://www.youtube-nocookie.com/embed/' + link.dataset.yt + '?autoplay=1&rel=0';
+      iframe.title = title;
+      iframe.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+      iframe.allowFullscreen = true;
+      frame.replaceChildren(iframe);
+      modal.setAttribute('aria-label', title);
+      caption.innerHTML = '';
+      caption.append('NS Builders, \u201C' + title + '\u201D \u00B7 ');
+      const yt = document.createElement('a');
+      yt.href = link.href;
+      yt.target = '_blank';
+      yt.rel = 'noopener';
+      yt.textContent = 'Watch on YouTube';
+      caption.append(yt);
+      modal.hidden = false;
+      document.body.classList.add('video-modal-open');
+      closeBtn.focus();
+    }
+
+    function close() {
+      if (modal.hidden) return;
+      frame.replaceChildren(); // removing the iframe stops playback
+      modal.hidden = true;
+      document.body.classList.remove('video-modal-open');
+      if (opener) opener.focus();
+      opener = null;
+    }
+
+    links.forEach(link => {
+      link.addEventListener('click', e => {
+        if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+        e.preventDefault();
+        open(link);
+      });
+    });
+
+    closeBtn.addEventListener('click', close);
+    modal.addEventListener('click', e => {
+      if (e.target === modal) close();
+    });
+    document.addEventListener('keydown', e => {
+      if (modal.hidden) return;
+      if (e.key === 'Escape') close();
+      if (e.key === 'Tab') {
+        // Keep focus inside the dialog: close button, player, YouTube link
+        const stops = [closeBtn, frame.querySelector('iframe'), caption.querySelector('a')].filter(Boolean);
+        const i = stops.indexOf(document.activeElement);
+        if (e.shiftKey && i <= 0) { e.preventDefault(); stops[stops.length - 1].focus(); }
+        else if (!e.shiftKey && i === stops.length - 1) { e.preventDefault(); stops[0].focus(); }
+      }
+    });
+  }
+
+  // ============================================
   // Audio Toggle
   // ============================================
 
@@ -390,6 +476,7 @@
     initSmoothScroll();
     initSectionSpy();
     initYouTubeEmbeds();
+    initVideoModal();
     initGallery();
     initAudioToggle();
   }

@@ -1021,8 +1021,19 @@ figcaption a:hover {
     padding-right: 1.25rem;
   }
 
+  /* Start-aligned so a long row can scroll to its first link;
+     auto margins still center a row that fits. */
   .site-subnav {
     gap: 0.25rem;
+    justify-content: flex-start;
+  }
+
+  .site-subnav a:first-child {
+    margin-left: auto;
+  }
+
+  .site-subnav a:last-child {
+    margin-right: auto;
   }
 
   .site-subnav a {

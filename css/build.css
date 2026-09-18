@@ -1,0 +1,289 @@
+/* Build page: extends main.css and watch.css */
+
+.build-section {
+  max-width: 1000px;
+  margin: 0 auto 6rem;
+  padding: 0 1.125rem;
+  scroll-margin-top: 6rem;
+}
+
+.build-section h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+  font-size: 2rem;
+  margin: 0 0 2rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+/* Specification tables */
+.spec {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.55;
+}
+
+.spec-row {
+  padding: 0.7rem 0;
+  border-bottom: 1px solid #ececec;
+}
+
+.spec-row:first-child {
+  border-top: 1px solid #ececec;
+}
+
+.spec dt {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #888;
+  margin-bottom: 0.2rem;
+}
+
+.spec dd {
+  margin: 0;
+  color: #1a1a1a;
+}
+
+.spec dd a {
+  text-decoration: underline;
+  text-decoration-color: #ccc;
+  text-underline-offset: 2px;
+}
+
+/* Table beside the reasons */
+.build-cols {
+  display: grid;
+  gap: 2.5rem;
+}
+
+.build-why p {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: #333;
+  margin: 0 0 1.25rem;
+}
+
+.build-watch {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8125rem !important;
+  letter-spacing: 0.04em;
+}
+
+.build-watch a {
+  color: #666;
+  text-decoration: underline;
+  text-decoration-color: #ccc;
+  text-underline-offset: 3px;
+}
+
+.build-watch a:hover {
+  color: #1a1a1a;
+}
+
+.build-lead {
+  margin: 0 0 2.5rem;
+}
+
+.build-lead img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.build-lead figcaption,
+.build-wall-drawing figcaption {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: #888;
+  margin-top: 0.6rem;
+}
+
+.build-lead figcaption a {
+  text-decoration: underline;
+  text-decoration-color: #ccc;
+}
+
+.build-strip {
+  margin-top: 2.5rem;
+}
+
+.build-strip .gallery-item img,
+.build-upclose-grid .gallery-item img {
+  aspect-ratio: 1 / 1;
+}
+
+/* Materials up close */
+.build-upclose {
+  max-width: 1200px;
+  margin: 0 auto 6rem;
+  padding: 0 1.125rem;
+}
+
+.build-upclose-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* The wall */
+.build-wall {
+  max-width: none;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  background: #f4f2ee;
+}
+
+.build-wall > * {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.build-wall-cols {
+  display: grid;
+  gap: 2.5rem;
+}
+
+.build-wall-drawing {
+  display: block;
+  margin: 0;
+}
+
+.build-wall-drawing .gallery-item {
+  background: #fff;
+}
+
+.build-wall-drawing .gallery-item img {
+  aspect-ratio: auto;
+  object-fit: contain;
+}
+
+.build-wall-layers p {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: #333;
+  margin: 0 0 1.5rem;
+}
+
+.build-wall-layers ol {
+  list-style: none;
+  counter-reset: layer;
+  margin: 0 0 1.75rem;
+  padding: 0;
+}
+
+.build-wall-layers li {
+  counter-increment: layer;
+  position: relative;
+  padding: 0.85rem 0 0.85rem 2.75rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.build-wall-layers li:last-child {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.build-wall-layers li::before {
+  content: counter(layer);
+  position: absolute;
+  left: 0;
+  top: 0.8rem;
+  width: 1.75rem;
+  height: 1.75rem;
+  border: 1px solid #1a1a1a;
+  border-radius: 50%;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  line-height: 1.7rem;
+  text-align: center;
+  color: #1a1a1a;
+}
+
+.build-wall-layers strong {
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+/* Drawings */
+.build-drawings {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.build-drawings .gallery-item {
+  background: #fff;
+  border: 1px solid #ececec;
+}
+
+.build-drawings .gallery-item img {
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+}
+
+.build-note {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8125rem;
+  color: #888;
+  margin-top: 2.5rem;
+}
+
+/* Drawings open on white, photographs on black */
+.build-page .lightbox img {
+  background: #fff;
+}
+
+@media (min-width: 768px) {
+  .build-section,
+  .build-upclose {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .build-cols {
+    grid-template-columns: 5fr 7fr;
+    gap: 4rem;
+  }
+
+  .build-cols--even,
+  .spec--wide {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .spec--wide {
+    display: grid;
+    column-gap: 4rem;
+  }
+
+  .spec--wide .spec-row:nth-child(2) {
+    border-top: 1px solid #ececec;
+  }
+
+  .build-wall-cols {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .build-wall-drawing {
+    position: sticky;
+    top: 7rem;
+  }
+
+  .build-upclose-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .build-drawings {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .build-upclose-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}

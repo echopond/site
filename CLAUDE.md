@@ -99,3 +99,11 @@ This is a zero-configuration static site:
 ## Listen page is hidden until launch (2026-09-18)
 
 The podcast page and feed still work at their direct URLs, but nothing links to them, the article no longer advertises the RSS feed, and the page carries `noindex`. Every hidden piece is marked `LISTEN-HIDDEN`. To launch: `grep -rn LISTEN-HIDDEN .`, then uncomment the Listen links in the Read and Watch menus (desktop and mobile), restore the RSS `<link>` in `index.html`, and delete the robots meta line in `podcast/index.html`.
+
+## Build page (added 2026-09-18)
+
+`build/index.html` explains how the house is made, ground up, for architects, builders and general readers. It is generated: edit `scratch/build-page/make_page.py` (copy and structure) and `export_photos.py` (Motif Media crops and captions, written to `photos.json`) in the Echo Pond workspace, then re-run both. Do not hand-edit the HTML. It adds `css/build.css` and reuses `main.css`, `watch.css` and the `[data-gallery]` lightbox. Media lives in `media/build/` (2000 px plus `-thumb` at 900 px).
+
+- Every figure on the page has a Publish row with two independent sources in `scratch/build-page/03_claims.md`. Held items stay off the page until settled. No costs, no street address, no floor or site plans. The envelope is described as "Passive House-level"; no test figure is stated.
+- The Drawings section (sections and elevations from the June 2024 permit set) is switched off with `SHOW_DRAWINGS = False` until Vincent Appel approves; the exported sheets are held in `scratch/build-page/drawings-held/`, not in this repo. Only the wall section from A-401 is published, in "The wall". No image may include the permit set's title block.
+- Below 1024 px the section row (`.site-subnav`) is start-aligned so a long row can scroll to its first link; auto margins center a row that fits.

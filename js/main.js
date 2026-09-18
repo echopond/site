@@ -298,7 +298,7 @@
       const item = items[index];
       img.src = item.href;
       img.alt = item.querySelector('img').alt;
-      caption.textContent = item.dataset.caption + ' ' + credit + ' ' + (index + 1) + ' / ' + items.length;
+      caption.textContent = item.dataset.caption + ' ' + (item.dataset.credit || credit) + ' ' + (index + 1) + ' / ' + items.length;
     }
 
     function open(i) {

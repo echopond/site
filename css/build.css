@@ -115,6 +115,11 @@
   aspect-ratio: 1 / 1;
 }
 
+/* a low-resolution lead is held near its own size */
+.build-lead--small {
+  max-width: 800px;
+}
+
 /* Materials up close */
 .build-upclose {
   max-width: 1200px;

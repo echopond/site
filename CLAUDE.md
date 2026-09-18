@@ -78,7 +78,7 @@ This is a zero-configuration static site:
 
 ## Podcast (added 2026-09-07)
 
-`podcast/index.html` is the audiobook-documentary player for *A House-Shaped House* (eight chapters, ~2 h 3 min). It reuses `css/main.css` and adds `css/podcast.css` and `js/podcast.js`. Audio lives in `media/podcast/` as 96 kbps mono MP3 (about 87 MB total; GitHub rejects files over 100 MB, so never commit WAV masters). `podcast/feed.xml` is a hand-built RSS feed with iTunes tags; enclosure URLs and `length` (byte size) must be updated if an MP3 is replaced. Deep links take the form `podcast/#part-3&t=8m40s`. The player stores resume position and speed in `localStorage`.
+`listen/index.html` (moved from `podcast/` on 2026-09-18 to match the menu word; `podcast/index.html` is now only a redirect that keeps the `#part-N` hash) is the audiobook-documentary player for *A House-Shaped House* (eight chapters, ~2 h 3 min). It reuses `css/main.css` and adds `css/podcast.css` and `js/podcast.js`. Audio lives in `media/podcast/` as 96 kbps mono MP3 (about 87 MB total; GitHub rejects files over 100 MB, so never commit WAV masters). `listen/feed.xml` is a hand-built RSS feed with iTunes tags; enclosure URLs and `length` (byte size) must be updated if an MP3 is replaced. Deep links take the form `listen/#part-3&t=8m40s`. The player stores resume position and speed in `localStorage`.
 
 ## Watch page (added 2026-09-18)
 
@@ -98,7 +98,7 @@ This is a zero-configuration static site:
 
 ## Listen page is hidden until launch (2026-09-18)
 
-The podcast page and feed still work at their direct URLs, but nothing links to them, the article no longer advertises the RSS feed, and the page carries `noindex`. Every hidden piece is marked `LISTEN-HIDDEN`. To launch: `grep -rn LISTEN-HIDDEN .`, then uncomment the Listen links in the Read and Watch menus (desktop and mobile), restore the RSS `<link>` in `index.html`, and delete the robots meta line in `podcast/index.html`.
+The podcast page and feed still work at their direct URLs, but nothing links to them, the article no longer advertises the RSS feed, and the page carries `noindex`. Every hidden piece is marked `LISTEN-HIDDEN`. To launch: `grep -rn LISTEN-HIDDEN .`, then uncomment the Listen links in the Read and Watch menus (desktop and mobile), restore the RSS `<link>` in `index.html`, delete the robots meta line in `listen/index.html`, and remove `Disallow: /listen/` from `robots.txt`.
 
 ## Build page (added 2026-09-18)
 
@@ -115,7 +115,7 @@ The podcast page and feed still work at their direct URLs, but nothing links to 
 ## Search, sharing and analytics (added 2026-09-18)
 
 - Canonical URL, Open Graph / Twitter tags and JSON-LD for every page come from `scratch/build-page/seo_head.py` in the Echo Pond workspace (block between `<!-- SEO -->` markers). Run it to refresh `index.html` and `watch/index.html`; `make_page.py` imports it for Build. The podcast page stays `noindex` until launch. Structured data gives the place as Canton, Massachusetts only: no street address, no coordinates.
-- `BASE` in `seo_head.py` is `https://echopond.org/`. The same address appears in `sitemap.xml`, `robots.txt`, `llms.txt` and `podcast/feed.xml`; change them together if the address ever changes.
+- `BASE` in `seo_head.py` is `https://echopond.org/`. The same address appears in `sitemap.xml`, `robots.txt`, `llms.txt` and `listen/feed.xml`; change them together if the address ever changes.
 - `js/analytics.js` loads Google Analytics 4 only when `GA_ID` is set in that file. It skips visitors who send Global Privacy Control or Do Not Track, and sends `video_open` and `photo_open` events.
 - `llms.txt` is a plain summary of the site for AI assistants; keep its facts in step with the Build page.
 - `scratch/build-page/seo_extras.py` writes the `VideoObject` data on Watch (between `<!-- VIDEOS -->` markers), the Watch-to-Build links on each episode's meta line, and `sitemap.xml` with its image entries. Run order: `export_photos.py` (if photos changed), `seo_head.py`, `make_page.py`, `seo_extras.py`. Do not hand-edit `sitemap.xml`. A new episode needs a row in `EPISODES` (upload date and length from its YouTube page).

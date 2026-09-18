@@ -374,10 +374,19 @@
   background: #f4f2ee;
 }
 
-.watch-finished > * {
-  max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
+/* Full-width band; the side padding keeps its contents on the same 1000px column as every other section */
+.watch-finished {
+  --gutter: 1.5rem;
+  padding-left: max(var(--gutter), calc((100% - 1000px) / 2 + var(--gutter)));
+  padding-right: max(var(--gutter), calc((100% - 1000px) / 2 + var(--gutter)));
+}
+
+.watch-finished h2 {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .watch-finished { --gutter: 2rem; }
 }
 
 .gallery--finished {
@@ -469,4 +478,28 @@
   font-size: 0.8125rem;
   line-height: 1.5;
   color: #888;
+}
+
+/* "Also from NS Builders": three small click-to-load films */
+.also-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+  margin: 1rem 0 0.75rem;
+}
+
+.also-item { margin: 0; }
+
+.also-item figcaption {
+  margin-top: 0.6rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: #666;
+}
+
+.also-item .yt-play { transform: scale(0.7); }
+
+@media (min-width: 600px) {
+  .also-grid { grid-template-columns: repeat(3, 1fr); gap: 1rem; }
 }

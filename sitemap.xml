@@ -77,30 +77,6 @@
     <image:image><image:loc>https://echopond.org/media/watch/finished-05.jpg</image:loc></image:image>
     <image:image><image:loc>https://echopond.org/media/watch/finished-06.jpg</image:loc></image:image>
     <image:image><image:loc>https://echopond.org/media/watch/finished-07.jpg</image:loc></image:image>
-    <image:image><image:loc>https://echopond.org/media/watch/above-01.jpg</image:loc></image:image>
-    <image:image><image:loc>https://echopond.org/media/watch/above-02.jpg</image:loc></image:image>
-    <image:image><image:loc>https://echopond.org/media/watch/above-03.jpg</image:loc></image:image>
-    <image:image><image:loc>https://echopond.org/media/watch/above-04.jpg</image:loc></image:image>
-    <image:image><image:loc>https://echopond.org/media/watch/above-05.jpg</image:loc></image:image>
-    <image:image><image:loc>https://echopond.org/media/watch/above-06.jpg</image:loc></image:image>
-    <image:image><image:loc>https://echopond.org/media/watch/above-07.jpg</image:loc></image:image>
-    <image:image><image:loc>https://echopond.org/media/watch/above-08.jpg</image:loc></image:image>
-    <image:image><image:loc>https://echopond.org/media/watch/above-09.jpg</image:loc></image:image>
-    <image:image><image:loc>https://echopond.org/media/watch/above-10.jpg</image:loc></image:image>
-    <image:image><image:loc>https://echopond.org/media/watch/above-11.jpg</image:loc></image:image>
-    <image:image><image:loc>https://echopond.org/media/watch/above-12.jpg</image:loc></image:image>
-    <image:image><image:loc>https://echopond.org/media/watch/above-13.jpg</image:loc></image:image>
-    <image:image><image:loc>https://echopond.org/media/watch/above-14.jpg</image:loc></image:image>
-    <image:image><image:loc>https://echopond.org/media/watch/above-15.jpg</image:loc></image:image>
-    <image:image><image:loc>https://echopond.org/media/watch/above-16.jpg</image:loc></image:image>
-    <image:image><image:loc>https://echopond.org/media/watch/above-17.jpg</image:loc></image:image>
-    <image:image><image:loc>https://echopond.org/media/watch/above-18.jpg</image:loc></image:image>
-    <image:image><image:loc>https://echopond.org/media/watch/above-19.jpg</image:loc></image:image>
-    <image:image><image:loc>https://echopond.org/media/watch/above-20.jpg</image:loc></image:image>
-    <image:image><image:loc>https://echopond.org/media/watch/above-21.jpg</image:loc></image:image>
-    <image:image><image:loc>https://echopond.org/media/watch/above-22.jpg</image:loc></image:image>
-    <image:image><image:loc>https://echopond.org/media/watch/above-23.jpg</image:loc></image:image>
-    <image:image><image:loc>https://echopond.org/media/watch/above-24.jpg</image:loc></image:image>
     <image:image><image:loc>https://echopond.org/media/watch/motif-shingle.jpg</image:loc></image:image>
     <image:image><image:loc>https://echopond.org/media/watch/motif-road.jpg</image:loc></image:image>
     <image:image><image:loc>https://echopond.org/media/watch/motif-ground.jpg</image:loc></image:image>
@@ -110,6 +86,9 @@
     <image:image><image:loc>https://echopond.org/media/watch/motif-glass.jpg</image:loc></image:image>
     <image:image><image:loc>https://echopond.org/media/watch/motif-interior.jpg</image:loc></image:image>
     <image:image><image:loc>https://echopond.org/media/watch/motif-shingle-alt.jpg</image:loc></image:image>
+    <image:image><image:loc>https://echopond.org/media/watch/also-01.jpg</image:loc></image:image>
+    <image:image><image:loc>https://echopond.org/media/watch/also-02.jpg</image:loc></image:image>
+    <image:image><image:loc>https://echopond.org/media/watch/also-03.jpg</image:loc></image:image>
     <image:image><image:loc>https://echopond.org/media/watch/finished-01.jpg</image:loc></image:image>
     <image:image><image:loc>https://echopond.org/media/watch/finished-03.jpg</image:loc></image:image>
     <image:image><image:loc>https://echopond.org/media/watch/finished-04.jpg</image:loc></image:image>

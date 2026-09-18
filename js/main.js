@@ -193,6 +193,30 @@
     lazyVideos.forEach(video => {
       videoObserver.observe(video);
     });
+
+    // A film marked data-play-in-view starts when half of it is on screen and pauses when it leaves.
+    // It stays muted; a viewer who pauses it is not overridden.
+    const films = document.querySelectorAll('video[data-play-in-view]');
+    if (!films.length || CONFIG.reducedMotion) return;
+    const filmObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        const film = entry.target;
+        if (entry.isIntersecting && !film.dataset.userPaused && !film.ended) {
+          film.dataset.auto = '1';
+          film.play().catch(() => {});
+        } else if (!entry.isIntersecting && !film.paused) {
+          film.dataset.auto = '1';
+          film.pause();
+        }
+      });
+    }, { threshold: 0.5 });
+    films.forEach(film => {
+      film.addEventListener('pause', () => {
+        if (film.dataset.auto) { delete film.dataset.auto; } else { film.dataset.userPaused = '1'; }
+      });
+      film.addEventListener('play', () => { delete film.dataset.auto; delete film.dataset.userPaused; });
+      filmObserver.observe(film);
+    });
   }
 
   // ============================================

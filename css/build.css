@@ -336,11 +336,15 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 40px;
-  height: 40px;
-  margin: -20px 0 0 -20px;
+  width: 46px;
+  height: 46px;
+  margin: -23px 0 0 -23px;
+  border: 1.5px solid rgba(255, 255, 255, 0.9);
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(0, 0, 0, 0.38);
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  transition: background 0.2s ease, transform 0.2s ease;
 }
 
 .build-video-play::after {
@@ -348,10 +352,15 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  margin: -7px 0 0 -4px;
+  margin: -8px 0 0 -5px;
   border-style: solid;
-  border-width: 7px 0 7px 12px;
-  border-color: transparent transparent transparent #1a1a1a;
+  border-width: 8px 0 8px 13px;
+  border-color: transparent transparent transparent rgba(255, 255, 255, 0.95);
+}
+
+.build-video:hover .build-video-play {
+  background: rgba(0, 0, 0, 0.6);
+  transform: scale(1.06);
 }
 
 .build-video-text {
@@ -370,18 +379,29 @@
 }
 
 .build-video-title {
-  font-size: 0.9375rem;
-  line-height: 1.35;
-  color: #1a1a1a;
+  font-size: 0.8125rem;
+  line-height: 1.4;
+  color: #6b6b6b;
 }
 
 .build-video-by {
-  font-size: 0.75rem;
-  color: #777;
+  font-size: 0.6875rem;
+  color: #999;
 }
 
 @media (prefers-reduced-motion: reduce) {
   .build-video-thumb img {
     transition: none;
+  }
+}
+
+/* Every section: one lead photograph, then a row of four */
+.build-strip {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (min-width: 768px) {
+  .build-strip {
+    grid-template-columns: repeat(4, 1fr);
   }
 }

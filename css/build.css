@@ -111,8 +111,7 @@
   margin-top: 2.5rem;
 }
 
-.build-strip .gallery-item img,
-.build-upclose-grid .gallery-item img {
+.build-strip .gallery-item img {
   aspect-ratio: 1 / 1;
 }
 
@@ -123,8 +122,80 @@
   padding: 0 1.125rem;
 }
 
-.build-upclose-grid {
+/* Section tiles: each photograph links to its section; the menu word shows on hover or focus,
+   and always on screens without hover. */
+.build-tiles {
+  display: grid;
   grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+}
+
+.build-tile {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+  background: #1a1a1a;
+}
+
+.build-tile--wall {
+  grid-column: span 2;
+  aspect-ratio: 2 / 1;
+}
+
+.build-tile img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease, opacity 0.3s ease;
+}
+
+.build-tile-label {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  padding: 0.75rem 0.875rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #fff;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0) 45%);
+  transition: opacity 0.3s ease, background 0.3s ease;
+}
+
+.build-tile:focus-visible {
+  outline: 2px solid #1a1a1a;
+  outline-offset: 2px;
+}
+
+@media (hover: hover) {
+  .build-tile-label {
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8125rem;
+    background: rgba(0, 0, 0, 0.42);
+    opacity: 0;
+  }
+
+  .build-tile:hover .build-tile-label,
+  .build-tile:focus-visible .build-tile-label {
+    opacity: 1;
+  }
+
+  .build-tile:hover img {
+    transform: scale(1.04);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .build-tile img,
+  .build-tile-label {
+    transition: none;
+  }
 }
 
 /* The wall */
@@ -273,8 +344,18 @@
     top: 7rem;
   }
 
-  .build-upclose-grid {
+  .build-tiles {
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* beside square tiles the wide tile takes the row's height */
+  .build-tile--wall {
+    aspect-ratio: auto;
+  }
+
+  .build-tile--wall img {
+    position: absolute;
+    inset: 0;
   }
 
   .build-drawings {
@@ -283,8 +364,8 @@
 }
 
 @media (min-width: 1024px) {
-  .build-upclose-grid {
-    grid-template-columns: repeat(5, 1fr);
+  .build-tiles {
+    grid-template-columns: repeat(6, 1fr);
   }
 }
 

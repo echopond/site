@@ -460,8 +460,10 @@
 }
 
 /* The film at the top of "From above" */
+/* Full width of the window, like the time-lapse on the Read page */
 .above-film {
-  margin: 0 0 1.5rem;
+  width: 100vw;
+  margin: 0 0 4rem calc(50% - 50vw);
 }
 
 .above-film video {
@@ -502,4 +504,9 @@
 
 @media (min-width: 600px) {
   .also-grid { grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+}
+
+/* 100vw includes a classic scrollbar's width; clip the few pixels rather than let the page scroll sideways */
+body {
+  overflow-x: clip;
 }

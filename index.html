@@ -36,14 +36,17 @@
   </button>
 
   <!-- Header -->
-  <header class="site-header">
-    <nav class="site-nav site-nav--centered">
+  <header class="site-header site-header--sub">
+    <nav class="site-nav site-nav--centered" aria-label="Pages">
+      <a href="./" class="is-current" aria-current="page">Read</a>
+      <a href="watch/">Watch</a>
+    </nav>
+    <nav class="site-subnav" aria-label="Sections of this article">
       <a href="#site">Site</a>
       <a href="#material">Material</a>
       <a href="#space">Space</a>
       <a href="#history">History</a>
       <a href="#landscape">Landscape</a>
-      <a href="watch/">Watch</a>
     </nav>
     <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
       <span></span>
@@ -54,12 +57,13 @@
   <!-- Mobile Menu -->
   <div class="mobile-menu" aria-hidden="true">
     <nav class="mobile-menu-nav">
+      <a href="./" class="is-current" aria-current="page">Read</a>
+      <a href="watch/">Watch</a>
       <a href="#site">Site</a>
       <a href="#material">Material</a>
       <a href="#space">Space</a>
       <a href="#history">History</a>
       <a href="#landscape">Landscape</a>
-      <a href="watch/">Watch</a>
     </nav>
   </div>
 

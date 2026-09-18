@@ -566,3 +566,17 @@
 body.video-modal-open {
   overflow: hidden;
 }
+
+/* Link from a section's film to the Watch page */
+.build-why p.build-more {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8125rem;
+  color: #666;
+  margin-top: 0.75rem;
+}
+
+.build-why p.build-more a {
+  text-decoration: underline;
+  text-decoration-color: #ccc;
+  text-underline-offset: 2px;
+}

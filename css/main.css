@@ -1136,3 +1136,16 @@ figcaption a:hover {
     font-size: 1.3125rem;
   }
 }
+
+/* In-text links in the article: a quiet underline, matching the Watch and Build pages */
+.article-body p a,
+.article figcaption a[href^="build/"] {
+  text-decoration: underline;
+  text-decoration-color: #ccc;
+  text-underline-offset: 2px;
+}
+
+.article-body p a:hover,
+.article figcaption a[href^="build/"]:hover {
+  text-decoration-color: currentColor;
+}

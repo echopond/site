@@ -1,0 +1,25 @@
+# Echo Pond. Search engines and AI assistants are welcome to read and cite this site.
+# Note: while the site is served at echopond.github.io/site/, crawlers read robots.txt only at the
+# host root, so this file takes effect once echopond.org points at GitHub Pages directly.
+User-agent: *
+Allow: /
+Disallow: /podcast/
+
+User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: Claude-SearchBot
+Allow: /
+User-agent: Claude-User
+Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+
+Sitemap: https://echopond.github.io/site/sitemap.xml

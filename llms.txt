@@ -1,0 +1,29 @@
+# Echo Pond
+
+> Echo Pond is a 2,600 sq ft house and studio in Canton, Massachusetts, designed by Of Possible (Vincent Appel), built by NS Builders (Nick Schiffer), with landscape by Dialogue-Environment (Terry Fitzpatrick). Construction ran from September 2024 to February 2026. This site documents the house: an article, a page on how it is built, and films and photographs of construction.
+
+Key facts, all stated on the site:
+
+- A main house and a studio under one gable roof a little over 100 ft long, joined by an open breezeway, on about 11 acres of woods and wetland beside a kettle pond.
+- Frost-protected shallow foundation; the polished structural slab is the finished first floor.
+- Panelized wood frame, 2x10 exterior walls at 16 in. on center, pre-cut by Cape Cod Panel.
+- Passive House-level envelope: Rockwool mineral wool inside and outside the sheathing, between Pro Clima Intello Plus and Pro Clima Adhero 3000 membranes, behind a vented cavity.
+- Cladding on walls and roof: half-sheet shingles of Roseburg marine-grade plywood, coated on all six sides in pine tar from Sage Restoration.
+- Andersen lift-slide units, 9 ft tall, across the first floor; Velux roof windows.
+- ERV in the main house, Lunos in-wall heat recovery units in the studio, no radiant slab.
+- Landscape: four custom native seed mixes from Ernst Conservation Seeds.
+
+## Pages
+
+- [Echo Pond (article)](https://echopond.github.io/site/): the site, the material, the space, the history of Glen Echo Pond and the landscape.
+- [Build](https://echopond.github.io/site/build/): the wall assembly layer by layer, then site, foundation, frame, envelope, shingle, glass, interior materials, furnishings, systems and landscape, each with a specification table, the firms and the products.
+- [Watch](https://echopond.github.io/site/watch/): NS Builders' construction episodes in build order, with photographs by Motif Media.
+
+## Credits
+
+- Architect: [Of Possible](https://www.ofpossible.com/echo-pond-residence)
+- Builder: [NS Builders](https://nsbuilders.com/)
+- Landscape architect: [Dialogue-Environment](https://www.dialogue-environment.com/)
+- Film and photography: [Motif Media](https://www.motifmedia.com/)
+
+The house is a private residence. The site gives its location as Canton, Massachusetts, and no more.

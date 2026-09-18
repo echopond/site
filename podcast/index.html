@@ -27,11 +27,16 @@
 </head>
 <body class="podcast-page">
 
-  <header class="site-header">
+  <header class="site-header site-header--sub">
     <nav class="site-nav site-nav--centered">
       <a href="../">Read</a>
       <a href="../watch/">Watch</a>
       <a href="./" class="is-current" aria-current="page">Listen</a>
+    </nav>
+    <nav class="site-subnav" aria-label="Sections of this page">
+      <a href="#chapters">Chapters</a>
+      <a href="#subscribe">Subscribe</a>
+      <a href="#credits">Credits</a>
     </nav>
     <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
       <span></span>
@@ -44,6 +49,9 @@
       <a href="../">Read</a>
       <a href="../watch/">Watch</a>
       <a href="./" class="is-current" aria-current="page">Listen</a>
+      <a href="#chapters">Chapters</a>
+      <a href="#subscribe">Subscribe</a>
+      <a href="#credits">Credits</a>
     </nav>
   </div>
 
@@ -69,12 +77,12 @@
         <p class="lead"><em>A House-Shaped House</em> is my account of building Echo Pond. It stays with one house and looks beneath the finished image like a kid kicking over a rock. We thought we understood what we were taking on. Over nearly five years, the soil, the budget, the bank, the ledge, and the work itself kept showing us otherwise. Life became white-knuckle exciting. The test was not just whether we could build a house, but whether the relationships carrying it could survive what building would ask of them. I kept messages, drawings, and notes because I was often confused and trying to make sense of the build from inside it. This is neither an exemplar nor a warning. It is one story of one attempt to build a house-shaped house, told from the moments when everyone was still trying to figure out what to do next.</p>
       </div>
 
-      <section class="episodes" aria-label="Chapters">
+      <section class="episodes" id="chapters" aria-label="Chapters">
         <h2 class="episodes-heading">Chapters</h2>
         <ol class="episode-list" id="episode-list"></ol>
       </section>
 
-      <section class="subscribe article-body">
+      <section class="subscribe article-body" id="subscribe">
         <h2>Listen in a podcast app</h2>
         <p>Copy the feed address into any podcast app that accepts a private or custom feed. On an iPhone or Mac, the Apple Podcasts button below follows the show directly. In Overcast, choose <em>Add by URL</em>.</p>
         <div class="feed-url">
@@ -99,7 +107,7 @@
       </section>
 
       <footer class="article-credits">
-        <h3>Credits</h3>
+        <h3 id="credits">Credits</h3>
         <div class="credits-grid">
           <div class="credit">
             <span class="credit-label">Text</span>

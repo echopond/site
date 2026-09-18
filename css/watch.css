@@ -381,7 +381,9 @@
   padding-right: max(var(--gutter), calc((100% - 1000px) / 2 + var(--gutter)));
 }
 
-.watch-finished h2 {
+.watch-gable h2,
+#place h2,
+#history h2 {
   text-align: center;
 }
 

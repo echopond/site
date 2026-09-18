@@ -3,7 +3,7 @@
    Custom events: video_open (Build page video dialog), photo_open (any photo lightbox). */
 (function () {
   'use strict';
-  var GA_ID = ''; // e.g. 'G-XXXXXXXXXX' from Google Analytics > Admin > Data streams
+  var GA_ID = 'G-GYYXVHXKZX'; // e.g. 'G-XXXXXXXXXX' from Google Analytics > Admin > Data streams
 
   if (!GA_ID) return;
   if (navigator.globalPrivacyControl || navigator.doNotTrack === '1') return;

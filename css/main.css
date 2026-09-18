@@ -161,32 +161,31 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
 }
 
-/* Scrollable nav on mobile */
+/* Phones and small tablets: the page row stays put; only the section row scrolls */
 @media (max-width: 767px) {
   .site-header {
     padding: 0;
     display: block;
-    overflow-x: auto;
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
   }
 
   .site-nav,
   .site-nav.site-nav--centered {
     display: flex;
-    justify-content: flex-start;
-    gap: 1.5rem;
-    padding: 1rem 1.5rem;
-    width: max-content;
-    min-width: 100%;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.25rem 1rem 0;
   }
 
   .site-nav a {
-    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 0 0.9rem;
+    font-size: 0.9375rem;
     white-space: nowrap;
   }
 
-  /* Hide hamburger - using scrollable nav instead */
+  /* The drawer duplicates the two rows; keep it off */
   .nav-toggle {
     display: none;
   }
@@ -999,26 +998,130 @@ figcaption a:hover {
   color: #1a1a1a;
 }
 
-@media (max-width: 767px) {
-  .site-nav,
-  .site-nav.site-nav--centered {
-    justify-content: center;
+.site-subnav a.is-active {
+  color: #1a1a1a;
+}
+
+/* The section row never pushes the page wider than the screen */
+.site-subnav {
+  position: relative;
+  max-width: 100%;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.site-subnav::-webkit-scrollbar {
+  display: none;
+}
+
+/* Tablets and small laptops */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .site-header {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
   }
 
-  .site-header--sub .site-nav {
-    padding-bottom: 0.25rem;
+  .site-subnav {
+    gap: 0.25rem;
+  }
+
+  .site-subnav a {
+    display: flex;
+    align-items: center;
+    min-height: 40px;
+    padding: 0 0.75rem;
+    font-size: 0.8125rem;
+    white-space: nowrap;
+  }
+
+  .site-header--sub {
+    gap: 0.25rem;
+    padding-bottom: 0.35rem;
+  }
+}
+
+/* Phones */
+@media (max-width: 767px) {
+  .site-header--sub {
+    gap: 0;
+    padding-bottom: 0;
   }
 
   .site-subnav {
     justify-content: flex-start;
-    gap: 1.25rem;
-    padding: 0.25rem 1.5rem 0.9rem;
-    width: max-content;
-    min-width: 100%;
+    gap: 0;
+    padding: 0 0.5rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x proximity;
+    /* Fade at both edges signals that the row swipes */
+    -webkit-mask-image: linear-gradient(to right, transparent 0, #000 1.25rem, #000 calc(100% - 1.75rem), transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0, #000 1.25rem, #000 calc(100% - 1.75rem), transparent 100%);
+  }
+
+  /* Centered when the links fit, left-aligned and swipeable when they do not */
+  .site-subnav a:first-child {
+    margin-left: auto;
+  }
+
+  .site-subnav a:last-child {
+    margin-right: auto;
   }
 
   .site-subnav a {
+    display: flex;
+    align-items: center;
     flex-shrink: 0;
+    min-height: 44px;
+    padding: 0 0.8rem;
+    font-size: 0.875rem;
+    color: #666;
     white-space: nowrap;
+    scroll-snap-align: center;
+  }
+}
+
+/* Phones: larger reading text, narrower side margins */
+@media (max-width: 639px) {
+  .article-header {
+    padding-left: 1.125rem;
+    padding-right: 1.125rem;
+  }
+
+  .article-body {
+    padding-left: 1.125rem;
+    padding-right: 1.125rem;
+  }
+
+  .article-body p,
+  .article-body .lead {
+    font-size: 1.1875rem;
+    line-height: 1.7;
+  }
+
+  .article-tagline {
+    font-size: 1.1875rem;
+  }
+
+  .full-image figcaption,
+  .image-grid figcaption {
+    padding-left: 1.125rem;
+    padding-right: 1.125rem;
+    font-size: 0.9375rem;
+    line-height: 1.55;
+  }
+
+  .image-grid {
+    padding-left: 1.125rem;
+    padding-right: 1.125rem;
+  }
+
+  .article-credits {
+    padding-left: 1.125rem;
+    padding-right: 1.125rem;
+  }
+
+  .article-body blockquote p {
+    font-size: 1.3125rem;
   }
 }

@@ -347,3 +347,54 @@
 .mobile-menu-nav a.is-current {
   color: #1a1a1a;
 }
+
+/* The finished house: set off on a quiet ground, one large image and six smaller */
+.watch-finished {
+  max-width: none;
+  margin-bottom: 5rem;
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+  background: #f4f2ee;
+}
+
+.watch-finished > * {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gallery--finished {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.gallery--finished .gallery-item {
+  background: #e9e6df;
+}
+
+.gallery--finished .gallery-item img {
+  height: 100%;
+  aspect-ratio: 1 / 1;
+}
+
+.gallery--finished .finished-item--hero,
+.gallery--finished .finished-item--wide {
+  grid-column: span 2;
+}
+
+.gallery--finished .finished-item--wide img {
+  aspect-ratio: 2 / 1;
+}
+
+.gallery--finished .finished-item--high img {
+  object-position: 50% 30%;
+}
+
+@media (min-width: 768px) {
+  .gallery--finished {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .gallery--finished .finished-item--hero {
+    grid-row: span 2;
+  }
+}

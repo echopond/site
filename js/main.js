@@ -222,13 +222,57 @@
   }
 
   // ============================================
+  // Section row: mark the section being read
+  // ============================================
+
+  function initSectionSpy() {
+    const subnav = document.querySelector('.site-subnav');
+    if (!subnav || !('IntersectionObserver' in window)) return;
+
+    const links = Array.from(subnav.querySelectorAll('a[href^="#"]'));
+    const byId = {};
+    links.forEach(link => {
+      const target = document.getElementById(link.getAttribute('href').slice(1));
+      if (target) byId[target.id] = link;
+    });
+
+    function activate(id) {
+      links.forEach(link => {
+        const on = link === byId[id];
+        link.classList.toggle('is-active', on);
+        if (on) link.setAttribute('aria-current', 'location');
+        else link.removeAttribute('aria-current');
+      });
+      // Keep the active link in view when the row is swipeable
+      const link = byId[id];
+      if (link && subnav.scrollWidth > subnav.clientWidth) {
+        subnav.scrollTo({
+          left: link.offsetLeft - (subnav.clientWidth - link.offsetWidth) / 2,
+          behavior: CONFIG.reducedMotion ? 'auto' : 'smooth'
+        });
+      }
+    }
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) activate(entry.target.id);
+      });
+    }, { rootMargin: '-25% 0px -70% 0px' });
+
+    Object.keys(byId).forEach(id => observer.observe(document.getElementById(id)));
+  }
+
+  // ============================================
   // Click-to-load YouTube
   // ============================================
 
   // Nothing is requested from YouTube until the viewer presses play
   function initGallery() {
-    const gallery = document.querySelector('[data-gallery]');
-    if (!gallery) return;
+    document.querySelectorAll('[data-gallery]').forEach(setupGallery);
+  }
+
+  function setupGallery(gallery) {
+    const credit = gallery.dataset.credit || 'Photo by Motif Media.';
     const items = Array.from(gallery.querySelectorAll('.gallery-item'));
     let index = 0;
     let lastFocus = null;
@@ -254,7 +298,7 @@
       const item = items[index];
       img.src = item.href;
       img.alt = item.querySelector('img').alt;
-      caption.textContent = item.dataset.caption + ' Photo by Motif Media. ' + (index + 1) + ' / ' + items.length;
+      caption.textContent = item.dataset.caption + ' ' + credit + ' ' + (index + 1) + ' / ' + items.length;
     }
 
     function open(i) {
@@ -344,6 +388,7 @@
     initScrollReveal();
     initLazyVideos();
     initSmoothScroll();
+    initSectionSpy();
     initYouTubeEmbeds();
     initGallery();
     initAudioToggle();

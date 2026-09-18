@@ -398,3 +398,8 @@
     grid-row: span 2;
   }
 }
+
+/* Episode anchors, linked from the Build page, land below the fixed header */
+.yt {
+  scroll-margin-top: 7.5rem;
+}

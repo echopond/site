@@ -1150,3 +1150,17 @@ figcaption a:hover {
 .article figcaption a[href^="build/"]:hover {
   text-decoration-color: currentColor;
 }
+
+/* Meadow sequence: one wide photograph, two portraits beneath, one caption */
+.full-image--lead { margin-bottom: 1rem; }
+.image-grid--portrait img { aspect-ratio: 3 / 4; }
+.image-grid-caption {
+  grid-column: 1 / -1;
+  margin: 0;
+  font-family: 'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: #9c9589;
+}
+@media (min-width: 640px) { .full-image--lead { margin-bottom: 1.5rem; } }
+@media (min-width: 768px) { .full-image--lead { margin-bottom: 2rem; } }

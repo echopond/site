@@ -1,3 +1,4 @@
+/* design: tar (recoloured by scratch/site-next/build_v3.py; do not recolour twice) */
 /* Build page: extends main.css and watch.css */
 
 .build-section {
@@ -13,7 +14,7 @@
   font-size: 2rem;
   margin: 0 0 2rem;
   padding-bottom: 0.75rem;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 2px solid #0d0c0b; box-shadow: 0 1px 0 rgba(236, 231, 221, 0.07);
 }
 
 /* Specification tables */
@@ -26,11 +27,11 @@
 
 .spec-row {
   padding: 0.7rem 0;
-  border-bottom: 1px solid #ececec;
+  border-bottom: 2px solid #0d0c0b; box-shadow: 0 1px 0 rgba(236, 231, 221, 0.07);
 }
 
 .spec-row:first-child {
-  border-top: 1px solid #ececec;
+  border-top: 2px solid #0d0c0b; box-shadow: inset 0 1px 0 rgba(236, 231, 221, 0.07);
 }
 
 .spec dt {
@@ -38,18 +39,18 @@
   font-weight: 500;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #888;
+  color: #9c9589;
   margin-bottom: 0.2rem;
 }
 
 .spec dd {
   margin: 0;
-  color: #1a1a1a;
+  color: #ece7dd;
 }
 
 .spec dd a {
   text-decoration: underline;
-  text-decoration-color: #ccc;
+  text-decoration-color: #94743f;
   text-underline-offset: 2px;
 }
 
@@ -62,7 +63,7 @@
 .build-why p {
   font-size: 1.125rem;
   line-height: 1.7;
-  color: #333;
+  color: #ece7dd;
   margin: 0 0 1.25rem;
 }
 
@@ -73,14 +74,14 @@
 }
 
 .build-watch a {
-  color: #666;
+  color: #b9b2a5;
   text-decoration: underline;
-  text-decoration-color: #ccc;
+  text-decoration-color: #94743f;
   text-underline-offset: 3px;
 }
 
 .build-watch a:hover {
-  color: #1a1a1a;
+  color: #ece7dd;
 }
 
 .build-lead {
@@ -98,13 +99,13 @@
   font-family: 'Inter', sans-serif;
   font-size: 0.8125rem;
   line-height: 1.5;
-  color: #888;
+  color: #9c9589;
   margin-top: 0.6rem;
 }
 
 .build-lead figcaption a {
   text-decoration: underline;
-  text-decoration-color: #ccc;
+  text-decoration-color: #94743f;
 }
 
 .build-strip {
@@ -140,7 +141,7 @@
   display: block;
   overflow: hidden;
   aspect-ratio: 1 / 1;
-  background: #1a1a1a;
+  background: #121110;
 }
 
 .build-tile--wall {
@@ -173,7 +174,7 @@
 }
 
 .build-tile:focus-visible {
-  outline: 2px solid #1a1a1a;
+  outline: 2px solid #ece7dd;
   outline-offset: 2px;
 }
 
@@ -208,7 +209,7 @@
   max-width: none;
   padding-top: 4rem;
   padding-bottom: 4rem;
-  background: #f4f2ee;
+  background: #24211e;
 }
 
 .build-wall > * {
@@ -228,7 +229,7 @@
 }
 
 .build-wall-drawing .gallery-item {
-  background: #fff;
+  background: #1b1917;
 }
 
 .build-wall-drawing .gallery-item img {
@@ -239,7 +240,7 @@
 .build-wall-layers p {
   font-size: 1.125rem;
   line-height: 1.7;
-  color: #333;
+  color: #ece7dd;
   margin: 0 0 1.5rem;
 }
 
@@ -257,7 +258,7 @@
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   font-size: 1rem;
   line-height: 1.6;
-  color: #333;
+  color: #ece7dd;
 }
 
 .build-wall-layers li:last-child {
@@ -271,18 +272,18 @@
   top: 0.8rem;
   width: 1.75rem;
   height: 1.75rem;
-  border: 1px solid #1a1a1a;
+  border: 1px solid #ece7dd;
   border-radius: 50%;
   font-family: 'Inter', sans-serif;
   font-size: 0.75rem;
   line-height: 1.7rem;
   text-align: center;
-  color: #1a1a1a;
+  color: #ece7dd;
 }
 
 .build-wall-layers strong {
   font-weight: 600;
-  color: #1a1a1a;
+  color: #ece7dd;
 }
 
 /* Drawings */
@@ -291,8 +292,8 @@
 }
 
 .build-drawings .gallery-item {
-  background: #fff;
-  border: 1px solid #ececec;
+  background: #1b1917;
+  border: 1px solid #38342f;
 }
 
 .build-drawings .gallery-item img {
@@ -303,13 +304,13 @@
 .build-note {
   font-family: 'Inter', sans-serif;
   font-size: 0.8125rem;
-  color: #888;
+  color: #9c9589;
   margin-top: 2.5rem;
 }
 
 /* Drawings open on white, photographs on black */
 .build-page .lightbox img {
-  background: #fff;
+  background: #1b1917;
 }
 
 @media (min-width: 768px) {
@@ -335,7 +336,7 @@
   }
 
   .spec--wide .spec-row:nth-child(2) {
-    border-top: 1px solid #ececec;
+    border-top: 2px solid #0d0c0b; box-shadow: inset 0 1px 0 rgba(236, 231, 221, 0.07);
   }
 
   .build-wall-cols {
@@ -381,9 +382,9 @@
   gap: 1rem;
   margin-top: 1.75rem;
   padding: 0.625rem;
-  border: 1px solid #e4e1db;
+  border: 1px solid #38342f;
   border-radius: 4px;
-  background: #faf9f7;
+  background: #1b1917;
   color: inherit;
   text-decoration: none;
   transition: border-color 0.2s ease, background 0.2s ease;
@@ -391,8 +392,8 @@
 
 .build-video:hover,
 .build-video:focus-visible {
-  border-color: #1a1a1a;
-  background: #fff;
+  border-color: #ece7dd;
+  background: #1b1917;
 }
 
 .build-video-thumb {
@@ -401,7 +402,7 @@
   max-width: 220px;
   overflow: hidden;
   border-radius: 2px;
-  background: #1a1a1a;
+  background: #121110;
 }
 
 .build-video-thumb img {
@@ -461,18 +462,18 @@
   font-size: 0.6875rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #8a8478;
+  color: #9c9589;
 }
 
 .build-video-title {
   font-size: 0.8125rem;
   line-height: 1.4;
-  color: #6b6b6b;
+  color: #b9b2a5;
 }
 
 .build-video-by {
   font-size: 0.6875rem;
-  color: #999;
+  color: #9c9589;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -517,7 +518,7 @@
 .video-modal-frame {
   position: relative;
   aspect-ratio: 16 / 9;
-  background: #000;
+  background: #121110;
 }
 
 .video-modal-frame iframe {
@@ -559,7 +560,7 @@
 .video-modal-caption a {
   color: #e6e6e6;
   text-decoration: underline;
-  text-decoration-color: #777;
+  text-decoration-color: #d9a95f;
   text-underline-offset: 2px;
 }
 
@@ -571,12 +572,12 @@ body.video-modal-open {
 .build-why p.build-more {
   font-family: 'Inter', sans-serif;
   font-size: 0.8125rem;
-  color: #666;
+  color: #b9b2a5;
   margin-top: 0.75rem;
 }
 
 .build-why p.build-more a {
   text-decoration: underline;
-  text-decoration-color: #ccc;
+  text-decoration-color: #94743f;
   text-underline-offset: 2px;
 }

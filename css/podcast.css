@@ -1,3 +1,4 @@
+/* design: tar (recoloured by scratch/site-next/build_v3.py; do not recolour twice) */
 /**
  * Echo Pond - Podcast page
  * Extends css/main.css. Same fonts, same palette.
@@ -9,7 +10,7 @@
 }
 
 .site-nav a.is-current {
-  color: #1a1a1a;
+  color: #ece7dd;
 }
 
 /* Header */
@@ -36,7 +37,7 @@
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #888;
+  color: #9c9589;
   margin-bottom: 0.75rem;
 }
 
@@ -55,7 +56,7 @@
   font-size: 1.5rem;
   font-style: italic;
   line-height: 1.5;
-  color: #333;
+  color: #ece7dd;
   margin-bottom: 1rem;
   text-wrap: pretty;
 }
@@ -63,14 +64,14 @@
 .podcast-byline {
   font-family: 'Inter', sans-serif;
   font-size: 0.9375rem;
-  color: #1a1a1a;
+  color: #ece7dd;
   margin-bottom: 0.25rem;
 }
 
 .podcast-meta {
   font-family: 'Inter', sans-serif;
   font-size: 0.8125rem;
-  color: #888;
+  color: #9c9589;
   margin-bottom: 1.5rem;
 }
 
@@ -99,25 +100,25 @@
   font-weight: 500;
   letter-spacing: 0.04em;
   padding: 0.75rem 1.25rem;
-  border: 1px solid #1a1a1a;
+  border: 1px solid #ece7dd;
   border-radius: 999px;
-  background: #fff;
-  color: #1a1a1a;
+  background: #1b1917;
+  color: #ece7dd;
   cursor: pointer;
   transition: background 0.2s ease, color 0.2s ease;
 }
 
 .btn:hover {
-  background: #f2f2f2;
+  background: #24211e;
 }
 
 .btn--primary {
-  background: #1a1a1a;
+  background: #121110;
   color: #fff;
 }
 
 .btn--primary:hover {
-  background: #000;
+  background: #121110;
 }
 
 .btn--small {
@@ -142,7 +143,7 @@
   letter-spacing: 0.06em;
   text-transform: uppercase;
   padding-bottom: 0.75rem;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 2px solid #0d0c0b; box-shadow: 0 1px 0 rgba(236, 231, 221, 0.07);
   margin-bottom: 0.5rem;
 }
 
@@ -156,21 +157,21 @@
   gap: 1rem;
   align-items: start;
   padding: 1.25rem 0;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 2px solid #0d0c0b; box-shadow: 0 1px 0 rgba(236, 231, 221, 0.07);
   scroll-margin-top: 6rem;
 }
 
 .episode.is-active {
-  background: linear-gradient(to right, #fafafa, #fff);
+  background: linear-gradient(to right, #1b1917, #1b1917);
 }
 
 .episode-play {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 1px solid #1a1a1a;
-  background: #fff;
-  color: #1a1a1a;
+  border: 1px solid #ece7dd;
+  background: #1b1917;
+  color: #ece7dd;
   cursor: pointer;
   font-size: 0.75rem;
   display: flex;
@@ -183,7 +184,7 @@
 
 .episode-play:hover,
 .episode.is-active .episode-play {
-  background: #1a1a1a;
+  background: #121110;
   color: #fff;
 }
 
@@ -193,7 +194,7 @@
   font-weight: 500;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #888;
+  color: #9c9589;
   margin-bottom: 0.25rem;
 }
 
@@ -202,7 +203,7 @@
   font-size: 1.0625rem;
   font-weight: 500;
   line-height: 1.35;
-  color: #1a1a1a;
+  color: #ece7dd;
   margin-bottom: 0.35rem;
   text-wrap: balance;
 }
@@ -211,7 +212,7 @@
   font-family: 'Lora', serif;
   font-size: 0.9375rem;
   line-height: 1.6;
-  color: #555;
+  color: #b9b2a5;
   text-wrap: pretty;
 }
 
@@ -230,7 +231,7 @@
 .episode-progress span {
   display: block;
   height: 100%;
-  background: #1a1a1a;
+  background: #121110;
   width: 0;
 }
 
@@ -244,14 +245,14 @@
 .episode-duration {
   font-family: 'Inter', sans-serif;
   font-size: 0.8125rem;
-  color: #888;
+  color: #9c9589;
   white-space: nowrap;
 }
 
 .episode-link {
   font-family: 'Inter', sans-serif;
   font-size: 0.75rem;
-  color: #888;
+  color: #9c9589;
   background: none;
   border: none;
   cursor: pointer;
@@ -261,7 +262,7 @@
 }
 
 .episode-link:hover {
-  color: #1a1a1a;
+  color: #ece7dd;
 }
 
 /* Subscribe */
@@ -271,7 +272,7 @@
   letter-spacing: 0.06em;
   text-transform: uppercase;
   padding-bottom: 0.75rem;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 2px solid #0d0c0b; box-shadow: 0 1px 0 rgba(236, 231, 221, 0.07);
   margin-bottom: 1.5rem;
 }
 
@@ -290,8 +291,8 @@
 .feed-url code {
   font-size: 0.8125rem;
   padding: 0.5rem 0.75rem;
-  background: #f5f5f5;
-  border: 1px solid #e5e5e5;
+  background: #24211e;
+  border: 1px solid #38342f;
   overflow-wrap: anywhere;
 }
 
@@ -309,9 +310,9 @@
   font-size: 0.8125rem;
   font-weight: 500;
   letter-spacing: 0.02em;
-  color: #1a1a1a;
+  color: #ece7dd;
   padding: 0.55rem 1rem 0.55rem 0.7rem;
-  border: 1px solid #ddd;
+  border: 1px solid #38342f;
   border-radius: 999px;
   transition: border-color 0.2s ease, background 0.2s ease;
 }
@@ -321,14 +322,14 @@
 }
 
 .app-link:hover {
-  border-color: #1a1a1a;
-  background: #f8f8f8;
+  border-color: #ece7dd;
+  background: #24211e;
 }
 
 .app-icon {
   width: 22px;
   height: 22px;
-  fill: #1a1a1a;
+  fill: #ece7dd;
   flex-shrink: 0;
 }
 
@@ -339,22 +340,22 @@
   right: 0;
   bottom: 0;
   z-index: 200;
-  background: rgba(255, 255, 255, 0.96);
+  background: rgba(27, 25, 23, 0.94);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
-  border-top: 1px solid #e5e5e5;
+  border-top: 2px solid #0d0c0b; box-shadow: inset 0 1px 0 rgba(236, 231, 221, 0.07);
   padding-bottom: env(safe-area-inset-bottom);
 }
 
 .player-progress {
   position: relative;
   height: 4px;
-  background: #e5e5e5;
+  background: #38342f;
   cursor: pointer;
 }
 
 .player-progress:focus-visible {
-  outline: 2px solid #1a1a1a;
+  outline: 2px solid #ece7dd;
   outline-offset: 2px;
 }
 
@@ -372,7 +373,7 @@
 }
 
 .player-progress-played {
-  background: #1a1a1a;
+  background: #121110;
 }
 
 .player-inner {
@@ -408,7 +409,7 @@
   font-size: 0.6875rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #888;
+  color: #9c9589;
 }
 
 .player-title {
@@ -433,7 +434,7 @@
   height: 36px;
   border: none;
   background: none;
-  color: #1a1a1a;
+  color: #ece7dd;
   cursor: pointer;
   font-size: 0.9rem;
   border-radius: 50%;
@@ -444,14 +445,14 @@
 }
 
 .ctl:hover {
-  background: #f0f0f0;
+  background: #24211e;
 }
 
 .ctl span {
   font-family: 'Inter', sans-serif;
   font-size: 0.6875rem;
   font-weight: 600;
-  border: 1.5px solid #1a1a1a;
+  border: 1.5px solid #ece7dd;
   border-radius: 50%;
   width: 26px;
   height: 26px;
@@ -463,13 +464,13 @@
 .ctl--play {
   width: 44px;
   height: 44px;
-  background: #1a1a1a;
+  background: #121110;
   color: #fff;
   font-size: 1rem;
 }
 
 .ctl--play:hover {
-  background: #000;
+  background: #121110;
 }
 
 .ctl--text {
@@ -486,7 +487,7 @@
   grid-area: time;
   font-family: 'Inter', sans-serif;
   font-size: 0.75rem;
-  color: #888;
+  color: #9c9589;
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
 }
@@ -520,7 +521,7 @@
   left: 50%;
   bottom: 7rem;
   transform: translateX(-50%) translateY(10px);
-  background: #1a1a1a;
+  background: #121110;
   color: #fff;
   font-family: 'Inter', sans-serif;
   font-size: 0.8125rem;

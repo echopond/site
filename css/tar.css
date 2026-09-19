@@ -1,0 +1,127 @@
+/* tar.css: the pine-tar design system, laid over the current site's own layout. Prototype only.
+   Ground is the shingle; text is the warm white of the walls inside; the one accent is white oak.
+   Type: Schibsted Grotesk (a Scandinavian grotesk) for names, navigation and captions; Source Serif 4 for prose. Both are open licence. */
+:root { --tar: #1b1917; --tar-up: #24211e; --tar-deep: #121110; --ink: #ece7dd; --ink-2: #b9b2a5; --ink-3: #9c9589; --line: #38342f; --oak: #d9a95f; }
+html { background: var(--tar); color-scheme: dark; }
+body { background: var(--tar); color: var(--ink); font-family: 'Source Serif 4', Georgia, serif; -webkit-font-smoothing: antialiased; }
+::selection { background: var(--oak); color: var(--tar); }
+:focus-visible { outline-color: var(--oak); }
+
+/* Links: an oak line under the words. */
+.article-body a, .build-why a, .spec a, .watch-credit a, figcaption a { color: inherit; text-decoration-color: var(--oak); text-decoration-thickness: 1.5px; text-underline-offset: 0.2em; }
+.article-body a:hover, .build-why a:hover, .spec a:hover { color: var(--oak); }
+.site-nav a.is-current, .site-subnav a.is-active { color: var(--ink); text-decoration-color: var(--oak); border-color: var(--oak); }
+
+/* Photographs sit on the tar without frames; the one white sheet (the wall drawing) keeps its paper. */
+img { background-color: transparent; }
+.site-footer, .watch-finished { border-top: 1px solid var(--line); }
+hr { border-color: var(--line) !important; }
+.drop-cap::first-letter { color: var(--oak); }
+blockquote { border-color: var(--oak) !important; }
+input, select, button { color-scheme: dark; }
+/* The name, nearly mute: a label, not a masthead. */
+html .hero-title { text-transform: none; letter-spacing: -0.01em; font-weight: 500; font-size: clamp(1.5rem, 2.6vw, 2.125rem); margin-bottom: 0.5rem; }
+html .hero-tagline { font-family: 'Jost', 'Schibsted Grotesk', sans-serif; font-style: normal; font-weight: 300; font-size: 1rem; line-height: 1.65; letter-spacing: 0.03em; max-width: 27rem; opacity: 0.82; }
+
+/* "Cross the threshold and the house inverts itself." One section, Spatial Experience, is the inside: warm white walls, dark text. */
+.inside { background: #f4f1ea; color: #1b1917; padding: 3.5rem 0 1rem; margin: 3rem 0; }
+.inside :is(p, h2, h3, li, em, strong, a) { color: #1b1917; }
+.inside figcaption, .inside figcaption a { color: #55504a; }
+.inside .article-body a:hover { color: #7d5a1e; }
+.inside ::selection { background: #1b1917; color: #f4f1ea; }
+
+/* Build is the builder's document: values in a monospace face, on a raised panel. */
+.spec { background: var(--tar-up); padding: 0.5rem 1.25rem; }
+.spec dd, .spec dd a, .build-layers li { font-family: 'IBM Plex Mono', ui-monospace, Menlo, monospace; font-size: 0.8125rem; line-height: 1.6; letter-spacing: -0.01em; }
+
+/* The pond in the season it is now, in Canton: one thin line of window light under that photograph. */
+.image-grid--four figure.is-now img { box-shadow: 0 4px 0 var(--tar), 0 6px 0 var(--oak); }
+.inside .image-grid--four figure.is-now img { box-shadow: 0 4px 0 #f4f1ea, 0 6px 0 #7d5a1e; }
+
+/* The icon: the gable Chris drew. One colour. After sunset in Canton the window and the door are lit. */
+.gable-icon { display: block; height: 100%; width: auto; color: var(--ink); }
+.gable-icon .lit { fill: transparent; }
+html[data-light="evening"] .gable-icon .lit { fill: var(--oak); }
+.home-mark { position: absolute; left: 1.5rem; top: 1rem; height: 1.75rem; display: block; opacity: 0.92; }
+.home-mark:hover { opacity: 1; }
+html .hero-mark { height: 3.5rem; margin: 0 auto 0.9rem; color: #fff; }
+/* The name in a geometric face: two true circles under the triangle. Used once, here. */
+html .hero-title { font-family: 'Jost', 'Schibsted Grotesk', sans-serif; font-weight: 300; text-transform: uppercase; font-size: clamp(1.625rem, 2.6vw, 2rem); letter-spacing: 0.14em; margin-right: -0.14em; margin-bottom: 0.8rem; }
+/* On the home page the hero carries the icon, so the header mark waits until the hero's icon has left the screen. */
+html.has-hero-mark .home-mark { opacity: 0; visibility: hidden; transition: opacity 0.3s, visibility 0.3s; }
+html.has-hero-mark.past-hero .home-mark { opacity: 0.92; visibility: visible; }
+
+/* The two PNG logos carry a black box; on tar it shows. Screen blending drops the black and keeps the white mark. */
+.footer-logo-img[src$=".png"] { mix-blend-mode: screen; filter: contrast(1.35); }
+
+/* Watch: the drone film first, close to the words that follow; the five gable photographs on one line, wider than the column. */
+.above-film--first { margin-top: var(--header-h, 5.75rem); margin-bottom: 0; }
+.above-film--first + .watch-header { padding-top: 2.5rem; }
+@media (min-width: 1100px) {
+  .watch-gable .gallery--gable { width: min(100vw - 6rem, 1320px); margin-left: 50%; transform: translateX(-50%); gap: 6px; }
+}
+
+/* Families, selector by selector, from the live stylesheets. */
+.build-section h2 { font-family: 'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif; letter-spacing: -0.01em; font-weight: 500; }
+.spec { font-family: 'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif; }
+.build-watch { font-family: 'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif; }
+.build-lead figcaption,
+.build-wall-drawing figcaption { font-family: 'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif; }
+.build-tile-label { font-family: 'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif; }
+.build-wall-layers li::before { font-family: 'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif; }
+.build-note { font-family: 'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif; }
+.build-video-text { font-family: 'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif; }
+.video-modal-caption { font-family: 'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif; }
+.build-why p.build-more { font-family: 'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif; }
+body { font-family: 'Source Serif 4', Georgia, serif; }
+h1, h2, h3, h4, h5, h6 { font-family: 'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif; }
+.site-logo { font-family: 'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif; }
+.site-nav a { font-family: 'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif; }
+.mobile-menu-nav a { font-family: 'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif; }
+.hero-title { font-family: 'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif; }
+.hero-tagline { font-family: 'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif; letter-spacing: -0.01em; font-weight: 500; }
+.article-tagline { font-family: 'Source Serif 4', Georgia, serif; }
+.drop-cap::first-letter { font-family: 'Source Serif 4', Georgia, serif; }
+.article-body .lead { font-family: 'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif; }
+.article-body blockquote cite { font-family: 'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif; }
+.full-image figcaption { font-family: 'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif; }
+.image-grid figcaption { font-family: 'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif; }
+.credit-label { font-family: 'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif; }
+.credit-value { font-family: 'Source Serif 4', Georgia, serif; }
+.related-title { font-family: 'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif; }
+.related-location { font-family: 'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif; }
+.footer-links a { font-family: 'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif; }
+.footer-brand p { font-family: 'Source Serif 4', Georgia, serif; }
+.footer-nav a { font-family: 'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif; }
+.footer-social a { font-family: 'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif; }
+.footer-music { font-family: 'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif; }
+.footer-copyright { font-family: 'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif; }
+.site-subnav a { font-family: 'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif; }
+.podcast-kicker { font-family: 'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif; }
+.podcast-title { font-family: 'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif; }
+.podcast-subtitle { font-family: 'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif; letter-spacing: -0.01em; font-weight: 500; }
+.podcast-byline { font-family: 'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif; }
+.podcast-meta { font-family: 'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif; }
+.btn { font-family: 'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif; }
+.episode-number { font-family: 'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif; }
+.episode-title { font-family: 'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif; }
+.episode-sections { font-family: 'Source Serif 4', Georgia, serif; }
+.episode-duration { font-family: 'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif; }
+.episode-link { font-family: 'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif; }
+.app-link { font-family: 'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif; }
+.player-kicker { font-family: 'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif; }
+.player-title { font-family: 'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif; }
+.ctl span { font-family: 'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif; }
+.ctl--text { font-family: 'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif; }
+.player-time { font-family: 'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif; }
+.toast { font-family: 'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif; }
+.watch-title { font-family: 'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif; letter-spacing: -0.01em; font-weight: 500; }
+.watch-section h2 { font-family: 'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif; letter-spacing: -0.01em; font-weight: 500; }
+.watch-stage { font-family: 'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif; }
+.watch-meta,
+.watch-credit { font-family: 'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif; }
+.watch-also { font-family: 'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif; }
+.moments-grid figcaption,
+.place-grid figcaption { font-family: 'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif; }
+.above-film figcaption { font-family: 'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif; }
+.also-item figcaption { font-family: 'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif; }

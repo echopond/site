@@ -1,3 +1,4 @@
+/* design: tar (recoloured by scratch/site-next/build_v3.py; do not recolour twice) */
 /**
  * Echo Pond V5 - The Local Project Style
  * Clean, contemplative editorial design
@@ -24,8 +25,8 @@ body {
   font-family: 'Lora', Georgia, 'Times New Roman', serif;
   font-size: 1.125rem;
   line-height: 1.8;
-  color: #1a1a1a;
-  background-color: #fff;
+  color: #ece7dd;
+  background-color: #1b1917;
 }
 
 img {
@@ -79,7 +80,7 @@ h1, h2, h3, h4, h5, h6 {
   left: 50%;
   width: 20px;
   height: 2px;
-  background: #fff;
+  background: #1b1917;
   transform: translate(-50%, -50%) rotate(-45deg);
 }
 
@@ -102,7 +103,7 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   align-items: center;
   padding: 1.25rem 2rem;
-  background: #fff;
+  background: #1b1917;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -120,7 +121,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #1a1a1a;
+  color: #ece7dd;
 }
 
 .site-nav {
@@ -137,12 +138,12 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.8125rem;
   font-weight: 500;
   letter-spacing: 0.04em;
-  color: #666;
+  color: #b9b2a5;
   transition: color 0.2s ease;
 }
 
 .site-nav a:hover {
-  color: #1a1a1a;
+  color: #ece7dd;
 }
 
 /* Nav Toggle */
@@ -195,7 +196,7 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
   width: 100%;
   height: 1.5px;
-  background: #1a1a1a;
+  background: #121110;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
@@ -222,7 +223,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 280px;
   max-width: 80vw;
   z-index: 99;
-  background: #fff;
+  background: #1b1917;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -266,7 +267,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Inter', sans-serif;
   font-size: 1.25rem;
   font-weight: 500;
-  color: #1a1a1a;
+  color: #ece7dd;
 }
 
 /* ============================================
@@ -384,7 +385,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Lora', serif;
   font-size: 1.125rem;
   font-style: italic;
-  color: #555;
+  color: #b9b2a5;
   line-height: 1.6;
 }
 
@@ -432,7 +433,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 0.8;
   padding-right: 0.5rem;
   padding-top: 0.25rem;
-  color: #1a1a1a;
+  color: #ece7dd;
 }
 
 .article-body p {
@@ -449,7 +450,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
   line-height: 1.75;
   letter-spacing: -0.01em;
-  color: #333;
+  color: #ece7dd;
 }
 
 .article-body h2 {
@@ -460,7 +461,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 3rem;
   margin-bottom: 1.5rem;
   padding-bottom: 0.75rem;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 2px solid #0d0c0b; box-shadow: 0 1px 0 rgba(236, 231, 221, 0.07);
   scroll-margin-top: 5rem;
 }
 
@@ -483,8 +484,8 @@ h1, h2, h3, h4, h5, h6 {
 .article-body blockquote {
   margin: 2.5rem 0;
   padding: 2rem 0;
-  border-top: 1px solid #e5e5e5;
-  border-bottom: 1px solid #e5e5e5;
+  border-top: 2px solid #0d0c0b; box-shadow: inset 0 1px 0 rgba(236, 231, 221, 0.07);
+  border-bottom: 2px solid #0d0c0b; box-shadow: 0 1px 0 rgba(236, 231, 221, 0.07);
 }
 
 .article-body blockquote p {
@@ -501,7 +502,7 @@ h1, h2, h3, h4, h5, h6 {
   font-style: normal;
   font-weight: 500;
   letter-spacing: 0.04em;
-  color: #666;
+  color: #b9b2a5;
 }
 
 @media (min-width: 768px) {
@@ -539,7 +540,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0 1.5rem;
   font-family: 'Inter', sans-serif;
   font-size: 0.8125rem;
-  color: #888;
+  color: #9c9589;
   line-height: 1.5;
 }
 
@@ -575,7 +576,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0.75rem;
   font-family: 'Inter', sans-serif;
   font-size: 0.8125rem;
-  color: #888;
+  color: #9c9589;
   line-height: 1.5;
 }
 
@@ -642,7 +643,7 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 680px;
   margin: 2rem auto 0;
   padding: 3rem 1.5rem;
-  border-top: 1px solid #e5e5e5;
+  border-top: 2px solid #0d0c0b; box-shadow: inset 0 1px 0 rgba(236, 231, 221, 0.07);
 }
 
 .article-credits h3 {
@@ -651,7 +652,7 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   margin-bottom: 1.5rem;
-  color: #888;
+  color: #9c9589;
 }
 
 .credits-grid {
@@ -671,13 +672,13 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: #888;
+  color: #9c9589;
 }
 
 .credit-value {
   font-family: 'Lora', serif;
   font-size: 1rem;
-  color: #1a1a1a;
+  color: #ece7dd;
 }
 
 @media (min-width: 640px) {
@@ -703,7 +704,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .related {
   padding: 4rem 1.5rem;
-  background: #f8f8f8;
+  background: #24211e;
 }
 
 .related h2 {
@@ -713,7 +714,7 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 2rem;
-  color: #888;
+  color: #9c9589;
 }
 
 .related-grid {
@@ -744,7 +745,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Inter', sans-serif;
   font-size: 0.9375rem;
   font-weight: 500;
-  color: #1a1a1a;
+  color: #ece7dd;
   margin-bottom: 0.25rem;
 }
 
@@ -752,7 +753,7 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
   font-family: 'Inter', sans-serif;
   font-size: 0.8125rem;
-  color: #888;
+  color: #9c9589;
 }
 
 @media (min-width: 640px) {
@@ -774,7 +775,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .site-footer {
   padding: 3rem 1.5rem 2rem;
-  background: #000;
+  background: #121110;
   color: #fff;
 }
 
@@ -808,7 +809,7 @@ h1, h2, h3, h4, h5, h6 {
 .footer-links a {
   font-family: 'Inter', sans-serif;
   font-size: 0.6875rem;
-  color: #888;
+  color: #9c9589;
   transition: color 0.2s ease;
 }
 
@@ -819,7 +820,7 @@ h1, h2, h3, h4, h5, h6 {
 .footer-brand p {
   font-family: 'Lora', serif;
   font-size: 0.9375rem;
-  color: #888;
+  color: #9c9589;
   margin-top: 0.75rem;
   line-height: 1.6;
 }
@@ -833,7 +834,7 @@ h1, h2, h3, h4, h5, h6 {
 .footer-nav a {
   font-family: 'Inter', sans-serif;
   font-size: 0.8125rem;
-  color: #888;
+  color: #9c9589;
   transition: color 0.2s ease;
 }
 
@@ -849,7 +850,7 @@ h1, h2, h3, h4, h5, h6 {
 .footer-social a {
   font-family: 'Inter', sans-serif;
   font-size: 0.8125rem;
-  color: #888;
+  color: #9c9589;
   transition: color 0.2s ease;
 }
 
@@ -861,15 +862,15 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 1200px;
   margin: 2rem auto 0;
   padding-top: 1.5rem;
-  border-top: 1px solid #333;
+  border-top: 2px solid #0d0c0b; box-shadow: inset 0 1px 0 rgba(236, 231, 221, 0.07);
   font-family: 'Inter', sans-serif;
   font-size: 0.6875rem;
   text-align: center;
-  color: #666;
+  color: #b9b2a5;
 }
 
 .footer-music a {
-  color: #888;
+  color: #9c9589;
   transition: color 0.2s ease;
 }
 
@@ -883,7 +884,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Inter', sans-serif;
   font-size: 0.75rem;
   text-align: center;
-  color: #666;
+  color: #b9b2a5;
 }
 
 @media (min-width: 768px) {
@@ -959,18 +960,18 @@ h1, h2, h3, h4, h5, h6 {
 figcaption a {
   color: inherit;
   text-decoration: underline;
-  text-decoration-color: #ccc;
+  text-decoration-color: #94743f;
   text-underline-offset: 2px;
   transition: color 0.2s ease;
 }
 
 figcaption a:hover {
-  color: #1a1a1a;
+  color: #ece7dd;
 }
 
 /* Two-level header: pages on top, article sections beneath */
 .site-nav a.is-current {
-  color: #1a1a1a;
+  color: #ece7dd;
 }
 
 .site-header--sub {
@@ -990,16 +991,16 @@ figcaption a:hover {
   font-size: 0.75rem;
   font-weight: 400;
   letter-spacing: 0.04em;
-  color: #888;
+  color: #9c9589;
   transition: color 0.2s ease;
 }
 
 .site-subnav a:hover {
-  color: #1a1a1a;
+  color: #ece7dd;
 }
 
 .site-subnav a.is-active {
-  color: #1a1a1a;
+  color: #ece7dd;
 }
 
 /* The section row never pushes the page wider than the screen */
@@ -1086,7 +1087,7 @@ figcaption a:hover {
     min-height: 44px;
     padding: 0 0.8rem;
     font-size: 0.875rem;
-    color: #666;
+    color: #b9b2a5;
     white-space: nowrap;
     scroll-snap-align: center;
   }
@@ -1141,7 +1142,7 @@ figcaption a:hover {
 .article-body p a,
 .article figcaption a[href^="build/"] {
   text-decoration: underline;
-  text-decoration-color: #ccc;
+  text-decoration-color: #94743f;
   text-underline-offset: 2px;
 }
 

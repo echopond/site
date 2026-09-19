@@ -381,9 +381,8 @@
   padding-right: max(var(--gutter), calc((100% - 1000px) / 2 + var(--gutter)));
 }
 
-.watch-gable h2,
-#place h2,
-#history h2 {
+/* Every section heading on Watch is centered (Chris, 2026-09-18) */
+.watch-section h2 {
   text-align: center;
 }
 

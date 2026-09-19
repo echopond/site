@@ -1,4 +1,4 @@
-/* Prototype v3: where and when the house is. Canton, Massachusetts, by date arithmetic only; nothing is fetched.
+/* Where and when the house is. Canton, Massachusetts, by date arithmetic only; nothing is fetched.
    Marks the pond photograph of the current season, and lights the icon's window and door after sunset. */
 (function () {
   var q = new URLSearchParams(location.search), now = new Date();

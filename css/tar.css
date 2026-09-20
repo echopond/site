@@ -38,10 +38,9 @@ html .hero-tagline { font-family: 'Jost', 'Schibsted Grotesk', sans-serif; font-
 .image-grid--four figure.is-now img { box-shadow: 0 4px 0 var(--tar), 0 6px 0 var(--oak); }
 .inside .image-grid--four figure.is-now img { box-shadow: 0 4px 0 #f4f1ea, 0 6px 0 #7d5a1e; }
 
-/* The icon: the gable Chris drew. One colour. After sunset in Canton the window and the door are lit. */
+/* The icon: the gable Chris drew. One colour at every hour; the window and the door are cut out. */
 .gable-icon { display: block; height: 100%; width: auto; color: var(--ink); }
 .gable-icon .lit { fill: transparent; }
-html[data-light="evening"] .gable-icon .lit { fill: var(--oak); }
 .home-mark { position: absolute; left: 1.5rem; top: 1rem; height: 1.75rem; display: block; opacity: 0.92; }
 .home-mark:hover { opacity: 1; }
 html .hero-mark { height: 3.5rem; margin: 0 auto 0.9rem; color: #fff; }

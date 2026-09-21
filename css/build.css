@@ -229,7 +229,7 @@
 }
 
 .build-wall-drawing .gallery-item {
-  background: #1b1917;
+  background: #fff; /* matches the drawing's paper so letterboxing never shows */
 }
 
 .build-wall-drawing .gallery-item img {
@@ -342,12 +342,32 @@
   .build-wall-cols {
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
-    align-items: start;
+    align-items: stretch;
   }
 
+  /* the drawing takes the height of the layer list beside it */
   .build-wall-drawing {
-    position: sticky;
-    top: 7rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .build-wall-drawing .gallery-item {
+    position: relative;
+    flex: 1 1 auto;
+    min-height: 0;
+  }
+
+  .build-wall-drawing .gallery-item img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center top;
+  }
+
+  .build-wall-layers ol {
+    margin-bottom: 0;
   }
 
   .build-tiles {

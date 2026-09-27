@@ -10,21 +10,21 @@
 
   var EPISODES = [
     { id: 'prologue',  number: 'Prologue',  title: 'The House That Looks Inevitable', file: 'echo-pond_00-prologue.mp3', duration: 620,
-      sections: 'The finished house makes it easy to forget the uncertainty in nearly five years of emails and phone photos. That’s what makes life so exciting, right?' },
+      sections: 'The final certificate of occupancy arrived months after we moved in. The house was ready for its photographs. I returned to the messages, drawings, and notes that showed how uncertain the finished image had once been.' },
     { id: 'part-1',    number: 'Part I',    title: 'Before a House Could Be Drawn', file: 'echo-pond_01-part-1.mp3', duration: 1267,
-      sections: 'We owned eleven wooded acres beside a pond. Whether they could hold a house was still an open question.' },
+      sections: 'We owned eleven wooded acres beside a pond. Whether they could hold a house was still an open question. A soil test, a stalled architectural start, and a civil engineer’s pencil began to reveal where we could begin.' },
     { id: 'interlude', number: 'Interlude', title: 'What the Echo Returns', file: 'echo-pond_02-interlude.mp3', duration: 260,
-      sections: 'The pond had been named, renamed, and imagined by others long before we arrived. Old maps, a lakeside resort, two versions of the Echo myth, and Thoreau’s woods.' },
+      sections: 'A resort owner renamed the pond. More than a century later, we shortened the name again. Following the echo through old maps, competing myths, and Thoreau’s woods, a practical name began to acquire another meaning.' },
     { id: 'part-2',    number: 'Part II',   title: 'Choosing the House-Shaped House', file: 'echo-pond_03-part-2.mp3', duration: 1048,
-      sections: 'Alison had described warm rooms, a long cutting table, and places to be together or alone. The budget asked what could change, what mattered enough to keep, and whether we could continue.' },
+      sections: 'Alison had described warm rooms, a long cutting table, and places to be together or alone. Then we scrolled to the bottom of the budget. What followed would change the design and clarify what we had wanted all along.' },
     { id: 'part-3',    number: 'Part III',  title: 'Paying for the Line on the Drawing', file: 'echo-pond_04-part-3.mp3', duration: 1237,
-      sections: 'We had a design we wanted, a bank that would not pay for dirt, and no way to know exactly how the rock beneath us would break.' },
+      sections: 'We had a design we wanted and a bank that would not pay for dirt. We committed our own money to the road and site work. Then the ledge began revealing what no drawing or estimate could fully anticipate.' },
     { id: 'part-4',    number: 'Part IV',   title: 'The Difficult Work of a Simple Form', file: 'echo-pond_05-part-4.mp3', duration: 1494,
-      sections: 'What a simple form asked of everyone who built it. The only time to get it right is right now.' },
+      sections: 'A wire had to find the leg of a kitchen island that did not yet exist. As the house rose, its apparent simplicity asked more of everyone making it. “The only time I can get this right is right now.”' },
     { id: 'part-5',    number: 'Part V',    title: 'After Completion Changes Tense', file: 'echo-pond_06-part-5.mp3', duration: 998,
-      sections: 'We had the keys, a punch list, and a meadow that had barely begun. Living here would tell us things the drawings could not.' },
+      sections: 'We had the keys, a punch list, and a meadow that had barely begun. The house already felt like home, though completion continued around us. Living here began to tell us things the drawings could not.' },
     { id: 'coda',      number: 'Coda',      title: 'What Returned Changed', file: 'echo-pond_07-coda.mp3', duration: 327,
-      sections: 'We knew things would go wrong and who we had thrown our fate in with. The house we had imagined gave way to the house we had always wanted without knowing how to imagine it.' }
+      sections: 'I had imagined intention passing into drawings and drawings into a house. Looking back, I could see how every encounter had changed what came next. Other people’s knowledge had become part of what we loved. So had the people.' }
   ];
 
   var SPEEDS = [1, 1.25, 1.5, 1.75, 2, 0.75];

@@ -50,8 +50,6 @@ html .hero-title { font-family: 'Jost', 'Schibsted Grotesk', sans-serif; font-we
 html.has-hero-mark .home-mark { opacity: 0; visibility: hidden; transition: opacity 0.3s, visibility 0.3s; }
 html.has-hero-mark.past-hero .home-mark { opacity: 0.92; visibility: visible; }
 
-/* The two PNG logos carry a black box; on tar it shows. Screen blending drops the black and keeps the white mark. */
-.footer-logo-img[src$=".png"] { mix-blend-mode: screen; filter: contrast(1.35); }
 
 /* Watch: the drone film first, close to the words that follow; the five gable photographs on one line, wider than the column. */
 .above-film--first { margin-top: var(--header-h, 5.75rem); margin-bottom: 0; }

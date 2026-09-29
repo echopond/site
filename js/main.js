@@ -367,7 +367,7 @@
 
       button.addEventListener('click', () => {
         const iframe = document.createElement('iframe');
-        iframe.src = 'https://www.youtube-nocookie.com/embed/' + wrapper.dataset.yt + '?autoplay=1&rel=0';
+        iframe.src = 'https://www.youtube-nocookie.com/embed/' + wrapper.dataset.yt + '?autoplay=1&rel=0&enablejsapi=1&origin=' + encodeURIComponent(location.origin);
         iframe.title = button.getAttribute('aria-label') || 'Video';
         iframe.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
         iframe.allowFullscreen = true;
@@ -409,7 +409,7 @@
       opener = link;
       const title = link.dataset.title || 'Video';
       const iframe = document.createElement('iframe');
-      iframe.src = 'https://www.youtube-nocookie.com/embed/' + link.dataset.yt + '?autoplay=1&rel=0';
+      iframe.src = 'https://www.youtube-nocookie.com/embed/' + link.dataset.yt + '?autoplay=1&rel=0&enablejsapi=1&origin=' + encodeURIComponent(location.origin);
       iframe.title = title;
       iframe.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
       iframe.allowFullscreen = true;

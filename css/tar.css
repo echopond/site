@@ -21,7 +21,7 @@ blockquote { border-color: var(--oak) !important; }
 input, select, button { color-scheme: dark; }
 /* The name, nearly mute: a label, not a masthead. */
 html .hero-title { text-transform: none; letter-spacing: -0.01em; font-weight: 500; font-size: clamp(1.5rem, 2.6vw, 2.125rem); margin-bottom: 0.5rem; }
-html .hero-tagline { font-family: 'Jost', 'Schibsted Grotesk', sans-serif; font-style: normal; font-weight: 300; font-size: 1rem; line-height: 1.65; letter-spacing: 0.03em; max-width: 27rem; opacity: 0.82; }
+html .hero-tagline { font-family: 'Source Serif 4', Georgia, serif; font-style: italic; font-weight: 400; font-size: 1.125rem; line-height: 1.6; letter-spacing: 0; max-width: 28rem; opacity: 0.9; }
 
 /* "Cross the threshold and the house inverts itself." One section, Spatial Experience, is the inside: warm white walls, dark text. */
 .inside { background: #f4f1ea; color: #1b1917; padding: 3.5rem 0 1rem; margin: 3rem 0; }

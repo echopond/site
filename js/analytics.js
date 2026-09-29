@@ -9,6 +9,15 @@
   if (navigator.globalPrivacyControl || navigator.doNotTrack === '1') return;
   if (/^(localhost|127\.0\.0\.1)$/.test(location.hostname)) return;
 
+  // Owner opt-out: visit any page with ?ep_exclude=1 to stop GA on this browser,
+  // ?ep_exclude=0 to turn it back on. Stored in localStorage; nothing is sent.
+  try {
+    var flag = new URLSearchParams(location.search).get('ep_exclude');
+    if (flag === '1') localStorage.setItem('ep_exclude', '1');
+    else if (flag === '0') localStorage.removeItem('ep_exclude');
+    if (localStorage.getItem('ep_exclude') === '1') return;
+  } catch (e) {}
+
   var s = document.createElement('script');
   s.async = true;
   s.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(GA_ID);

@@ -106,4 +106,7 @@
     <image:image><image:loc>https://echopond.org/media/watch/historic-grove.jpg</image:loc></image:image>
     <image:image><image:loc>https://echopond.org/media/watch/historic-lake.jpg</image:loc></image:image>
   </url>
+  <url><loc>https://echopond.org/listen/</loc><lastmod>2026-09-19</lastmod>
+    <image:image><image:loc>https://echopond.org/media/podcast/cover-roof.jpg</image:loc></image:image>
+  </url>
 </urlset>

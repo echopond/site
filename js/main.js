@@ -269,7 +269,7 @@
       });
       // Keep the active link in view when the row is swipeable
       const link = byId[id];
-      if (link && subnav.scrollWidth > subnav.clientWidth) {
+      if (link && window.scrollY > 100 && subnav.scrollWidth > subnav.clientWidth) { // not on load at the top, or the first link is scrolled out of view
         subnav.scrollTo({
           left: link.offsetLeft - (subnav.clientWidth - link.offsetWidth) / 2,
           behavior: CONFIG.reducedMotion ? 'auto' : 'smooth'

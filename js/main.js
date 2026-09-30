@@ -165,6 +165,23 @@
   // Lazy Load Videos
   // ============================================
 
+  // Phones and Data Saver get the smaller file when a <source> offers one (data-src-small).
+  function pickSource(source) {
+    const conn = navigator.connection;
+    const small = window.matchMedia('(max-width: 768px)').matches || !!(conn && conn.saveData);
+    return (small && source.dataset.srcSmall) || source.dataset.src;
+  }
+
+  // The home hero has no src in the markup, so the size is chosen before anything downloads.
+  function initHeroVideo() {
+    document.querySelectorAll('video[data-hero]').forEach(video => {
+      const source = video.querySelector('source[data-src]');
+      if (!source) return;
+      source.src = pickSource(source);
+      video.load();
+    });
+  }
+
   function initLazyVideos() {
     const lazyVideos = document.querySelectorAll('.lazy-video');
     if (!lazyVideos.length) return;
@@ -180,7 +197,7 @@
             video.setAttribute('controls', '');
           }
           if (source) {
-            source.src = source.dataset.src;
+            source.src = pickSource(source);
             video.load();
           }
           videoObserver.unobserve(video);
@@ -497,6 +514,7 @@
     initMobileNav();
     initScrollReveal();
     initLazyVideos();
+    initHeroVideo();
     initSmoothScroll();
     initSectionSpy();
     initYouTubeEmbeds();

@@ -484,7 +484,7 @@
   color: #9c9589;
 }
 
-/* "Also from NS Builders": three small click-to-load films */
+/* "Also from NS Builders": four small click-to-load films */
 .also-grid {
   display: grid;
   gap: 1.5rem;
@@ -505,7 +505,7 @@
 .also-item .yt-play { transform: scale(0.7); }
 
 @media (min-width: 600px) {
-  .also-grid { grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+  .also-grid { grid-template-columns: repeat(2, 1fr); gap: 1.25rem 1rem; }
 }
 
 /* 100vw includes a classic scrollbar's width; clip the few pixels rather than let the page scroll sideways */

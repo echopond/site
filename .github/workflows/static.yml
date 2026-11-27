@@ -38,6 +38,9 @@ jobs:
         with:
           # Upload entire repository
           path: '.'
+      # Workaround for actions/deploy-pages#451: the artifact is not listed right after upload
+      - name: Wait for artifact listing
+        run: sleep 45
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5

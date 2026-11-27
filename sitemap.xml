@@ -69,7 +69,7 @@
     <image:image><image:loc>https://echopond.org/media/build/systems-01.jpg</image:loc></image:image>
     <image:image><image:loc>https://echopond.org/media/build/landscape-01.jpg</image:loc></image:image>
   </url>
-  <url><loc>https://echopond.org/watch/</loc><lastmod>2026-09-29</lastmod>
+  <url><loc>https://echopond.org/watch/</loc><lastmod>2026-11-27</lastmod>
     <image:image><image:loc>https://echopond.org/media/watch/gable-01.jpg</image:loc></image:image>
     <image:image><image:loc>https://echopond.org/media/watch/gable-02.jpg</image:loc></image:image>
     <image:image><image:loc>https://echopond.org/media/watch/gable-03.jpg</image:loc></image:image>
@@ -79,6 +79,7 @@
     <image:image><image:loc>https://echopond.org/media/watch/finished-05.jpg</image:loc></image:image>
     <image:image><image:loc>https://echopond.org/media/watch/finished-06.jpg</image:loc></image:image>
     <image:image><image:loc>https://echopond.org/media/watch/finished-07.jpg</image:loc></image:image>
+    <image:image><image:loc>https://echopond.org/media/watch/yt-start-to-finish.jpg</image:loc></image:image>
     <image:image><image:loc>https://echopond.org/media/watch/motif-shingle.jpg</image:loc></image:image>
     <image:image><image:loc>https://echopond.org/media/watch/motif-road.jpg</image:loc></image:image>
     <image:image><image:loc>https://echopond.org/media/watch/motif-ground.jpg</image:loc></image:image>
@@ -91,6 +92,7 @@
     <image:image><image:loc>https://echopond.org/media/watch/also-01.jpg</image:loc></image:image>
     <image:image><image:loc>https://echopond.org/media/watch/also-02.jpg</image:loc></image:image>
     <image:image><image:loc>https://echopond.org/media/watch/also-03.jpg</image:loc></image:image>
+    <image:image><image:loc>https://echopond.org/media/watch/also-04.jpg</image:loc></image:image>
     <image:image><image:loc>https://echopond.org/media/watch/finished-01.jpg</image:loc></image:image>
     <image:image><image:loc>https://echopond.org/media/watch/finished-03.jpg</image:loc></image:image>
     <image:image><image:loc>https://echopond.org/media/watch/finished-04.jpg</image:loc></image:image>

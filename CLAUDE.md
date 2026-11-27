@@ -4,79 +4,69 @@ Project-specific instructions for Claude Code.
 
 ## Project Overview
 
-Echo Pond is a static marketing website for a residential architecture project by Of Possible architects and NS Builders. It's a single-page presentation site showcasing a 2,600 sq ft home in Canton, Massachusetts.
+The public site for Echo Pond, a residential architecture project in Canton, Massachusetts by Of Possible architects and NS Builders. Live at https://echopond.org/. It is a small static site with three public pages and one hidden page (top section rewritten 2026-11-27; it had described a single-page site).
+
+| Page | File | What it is |
+|---|---|---|
+| Read | `index.html` | The article, with the hero video and background audio |
+| Watch | `watch/index.html` | Films and photographs of the build |
+| Build | `build/index.html` | How the house is made; generated, never hand-edited |
+| Listen | `listen/index.html` | The audiobook-documentary player; hidden until launch |
+
+`podcast/index.html` is only a redirect to Listen, and `404.html` is the not-found page. Each page has its own section below.
 
 ## Tech Stack
 
-- **HTML5** - Semantic markup, single `index.html` file
-- **CSS3** - Vanilla CSS in `css/main.css` (no preprocessors)
-- **JavaScript** - Vanilla ES6+ in `js/main.js` (no frameworks or bundlers)
-- **Fonts** - Google Fonts (Inter, Lora, Cormorant Garamond)
-- **Deployment** - GitHub Pages via GitHub Actions
+- **HTML, CSS, JavaScript**, all vanilla. No frameworks, preprocessors or bundlers, and no build step inside this repo.
+- **Fonts**: Google Fonts. Schibsted Grotesk for names, navigation and captions; Source Serif 4 for prose; IBM Plex Mono; and a subset of Jost on the Read page.
+- **Deployment**: GitHub Pages via GitHub Actions (`.github/workflows/static.yml`), served at the custom domain echopond.org.
+- **Generators**: several pages or blocks are written by Python scripts in the Echo Pond workspace (`../scratch/build-page/` and `../scratch/site-next/`), not in this repo. The page sections below say which.
 
 ## Project Structure
 
 ```
 /
-├── index.html          # Single-page application (main content)
-├── css/main.css        # All styles (~950 lines)
-├── js/main.js          # All interactivity (~265 lines)
-├── media/              # Video and audio assets
-│   ├── images/         # Photos
-│   └── video/          # Hero and content videos
-├── assets/images/      # UI assets and logos
-└── .github/workflows/  # GitHub Pages deployment
+├── index.html            # Read: the article
+├── watch/index.html      # Watch
+├── build/index.html      # Build (generated)
+├── listen/               # Listen page and feed.xml (hidden until launch)
+├── podcast/              # redirect and old feed address
+├── 404.html
+├── css/
+│   ├── main.css          # shared layout and components
+│   ├── tar.css           # the pine-tar design system, laid over main.css on every page
+│   ├── watch.css         # Watch, also reused by Build
+│   ├── build.css         # Build
+│   └── podcast.css       # Listen
+├── js/
+│   ├── main.js           # header, section spy, lazy video, gallery lightbox, YouTube click-to-load, video dialog, audio toggle
+│   ├── place.js          # season and after-sunset states by date arithmetic; nothing is fetched
+│   ├── analytics.js      # Google Analytics 4, only when GA_ID is set
+│   └── podcast.js        # the Listen player
+├── media/                # home/, images/, video/, watch/, build/, podcast/, share images, glass.mp3
+├── assets/images/        # logos and the house mark
+├── sitemap.xml, robots.txt, llms.txt, site.webmanifest, icons
+├── googleb1442ca4b34b9f16.html, 7b8fb50f948f6458e3c01561519238f8.txt   # search-engine verification; do not delete
+└── .github/workflows/    # GitHub Pages deployment
 ```
 
 ## Development Workflow
 
-This is a zero-configuration static site:
+1. Edit the file, or for generated pages edit the generator and re-run it (see the page's section).
+2. If CSS or JS changed, bump the `?v=` stamp on its links.
+3. Preview locally: `python3 -m http.server 8765` in this folder.
+4. Commit and push to `main`. GitHub Actions deploys to GitHub Pages.
 
-1. Edit HTML, CSS, or JS files directly
-2. Commit changes with descriptive messages
-3. Push to feature branch or main
-4. GitHub Actions auto-deploys to GitHub Pages
-
-**No build step, no linting, no tests required.**
+**No linting and no tests.**
 
 Deploy workflow (2026-11-27): `.github/workflows/static.yml` has a 45-second `Wait for artifact listing` step before the deploy. Without it the deploy step finds no `github-pages` artifact right after upload (`actions/deploy-pages#451`). Remove the step once that issue is fixed. After a push, confirm the run succeeded (`gh run list --limit 1`) before saying a change is live.
 
 ## Key Patterns
 
-### CSS Organization
-- Mobile-first responsive design
-- Breakpoint at 768px for mobile menu
-- BEM-inspired class naming
-- Sections organized by feature/component
-
-### JavaScript Patterns
-- IIFE pattern for encapsulation
-- IntersectionObserver for lazy loading and scroll animations
-- RequestAnimationFrame for scroll performance
-- Passive event listeners
-
-### Accessibility
-- Semantic HTML (`<header>`, `<nav>`, `<main>`, `<article>`, `<section>`, `<footer>`)
-- ARIA labels and `aria-expanded` attributes
-- Focus management for mobile menu
-- Respects `prefers-reduced-motion`
-
-## Key Features
-
-- **Audio toggle**: Fixed button to play/pause background audio
-- **Smart header**: Hides on scroll down, reappears on scroll up
-- **Lazy video loading**: Videos load when entering viewport
-- **Scroll animations**: Fade-in effects using IntersectionObserver
-- **Mobile navigation**: Hamburger menu below 768px
-
-## Important Files
-
-| File | Purpose |
-|------|---------|
-| `index.html` | All page content and structure |
-| `css/main.css` | Complete styling |
-| `js/main.js` | All interactivity |
-| `.github/workflows/static.yml` | Deployment configuration |
+- **CSS**: mobile-first, breakpoint at 768px, BEM-inspired class names. Colors come from the `tar.css` custom properties (`--tar`, `--tar-up`, `--ink`, `--line`, `--oak`).
+- **JavaScript**: one IIFE per file, IntersectionObserver for lazy loading and scroll effects, passive listeners.
+- **Accessibility**: semantic HTML, ARIA labels, visible focus, and `prefers-reduced-motion` respected.
+- **Third parties**: nothing is requested from YouTube until a visitor clicks a video. Instagram posts are linked cards, not embeds.
 
 ## Podcast (added 2026-09-07)
 

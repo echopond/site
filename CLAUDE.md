@@ -4,7 +4,7 @@ Project-specific instructions for Claude Code.
 
 ## Project Overview
 
-The public site for Echo Pond, a residential architecture project in Canton, Massachusetts by Of Possible architects and NS Builders. Live at https://echopond.org/. It is a small static site with three public pages and one hidden page (top section rewritten 2026-11-27; it had described a single-page site).
+The public site for Echo Pond, a residential architecture project in Massachusetts by Of Possible architects and NS Builders. Live at https://echopond.org/. It is a small static site with three public pages and one hidden page (top section rewritten 2026-11-27; it had described a single-page site).
 
 | Page | File | What it is |
 |---|---|---|
@@ -110,7 +110,7 @@ The podcast page and feed still work at their direct URLs, but nothing links to 
 
 ## Search, sharing and analytics (added 2026-09-18)
 
-- Canonical URL, Open Graph / Twitter tags and JSON-LD for every page come from `scratch/build-page/seo_head.py` in the Echo Pond workspace (block between `<!-- SEO -->` markers). Run it to refresh `index.html` and `watch/index.html`; `make_page.py` imports it for Build. The podcast page stays `noindex` until launch. Structured data gives the place as Canton, Massachusetts only: no street address, no coordinates.
+- Canonical URL, Open Graph / Twitter tags and JSON-LD for every page come from `scratch/build-page/seo_head.py` in the Echo Pond workspace (block between `<!-- SEO -->` markers). Run it to refresh `index.html` and `watch/index.html`; `make_page.py` imports it for Build. The podcast page stays `noindex` until launch. Structured data gives the place as Massachusetts only: no street address, no coordinates.
 - `BASE` in `seo_head.py` is `https://echopond.org/`. The same address appears in `sitemap.xml`, `robots.txt`, `llms.txt` and `listen/feed.xml`; change them together if the address ever changes.
 - `js/analytics.js` loads Google Analytics 4 only when `GA_ID` is set in that file. It skips visitors who send Global Privacy Control or Do Not Track, and sends `video_open` and `photo_open` events.
 - `llms.txt` is a plain summary of the site for AI assistants; keep its facts in step with the Build page.

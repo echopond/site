@@ -34,7 +34,7 @@ html .hero-tagline { font-family: 'Source Serif 4', Georgia, serif; font-style: 
 .spec { background: var(--tar-up); padding: 0.5rem 1.25rem; }
 .spec dd, .spec dd a, .build-layers li { font-family: 'IBM Plex Mono', ui-monospace, Menlo, monospace; font-size: 0.8125rem; line-height: 1.6; letter-spacing: -0.01em; }
 
-/* The pond in the season it is now, in Canton: one thin line of window light under that photograph. */
+/* The pond in the season it is now: one thin line of window light under that photograph. */
 .image-grid--four figure.is-now img { box-shadow: 0 4px 0 var(--tar), 0 6px 0 var(--oak); }
 .inside .image-grid--four figure.is-now img { box-shadow: 0 4px 0 #f4f1ea, 0 6px 0 #7d5a1e; }
 
